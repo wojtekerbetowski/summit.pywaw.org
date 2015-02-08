@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html>
 <head lang="en">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
   <title>PyWaw Summit - 25-26th of May, 2015 - Warsaw, Poland</title>
   <meta name="description" content="PyWaw Summit is a global Python conference held in Warsaw by local Python user group called PyWaw.">
-  <link href="img/favicon.png" rel="shortcut icon">
+  <link href="{% static 'img/favicon.png' %}" rel="shortcut icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:title" content="PyWaw Summit - 25-26th of May, 2015 - Warsaw, Poland" />
   <meta property="og:type" content="website" />
@@ -13,7 +14,7 @@
 
   <link href="http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" media="screen">
 </head>
 <body>
   <div id="fb-root"></div>
@@ -27,7 +28,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-3 logo">
-        <img src="img/logo.png" alt="PyWaw Summit" />
+        <img src="{% static 'img/logo.png' %}" alt="PyWaw Summit" />
       </div>
       <div class="col-md-9 description">
         <h1>PyWaw Summit</h1>
