@@ -66,12 +66,19 @@
     <!--<button>See all speakers</button>-->
   <!--</div>-->
 
-  <!--<div id="venue">-->
-    <!--<h2>Venue</h2>-->
-    <!--<p>Polonia Theater</p>-->
-    <!--<p>Marszałkowska 56<br/>00-545 Warszawa</p>-->
-    <!--<p><a href="http://teatrpolonia.pl">http://teatrpolonia.pl</a></p>-->
-  <!--</div>-->
+  <div class="venue-container" id="venue">
+    <div class="venue-overlay map" id="map"></div>
+    <div class="venue-overlay">
+      <div class="venue">
+        <div class="venue__box">
+          <h2 class="venue__title">Venue</h2>
+          <p>Polonia Theater</p>
+          <p>Marszałkowska 56<br/>00-545 Warszawa</p>
+          <p><a href="http://teatrpolonia.pl">http://teatrpolonia.pl</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!--<div id="organizers">-->
     <!--<h2>Organizers</h2>-->
@@ -105,5 +112,8 @@
       </ul>
     </div>
   </div>
+
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script type="text/javascript" src="{{ STATIC_URL }}/js/venue.js"></script>
 </body>
 </html>
