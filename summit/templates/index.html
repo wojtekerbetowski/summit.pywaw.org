@@ -4,7 +4,7 @@
 <head lang="en">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
   <title>PyWaw Summit - 25-26th of May, 2015 - Warsaw, Poland</title>
-  <meta name="description" content="PyWaw Summit is a global Python conference held in Warsaw by local Python user group called PyWaw.">
+  <meta name="description" content="PyWaw Summit is a conference organized for everyone interested in Python-related technology, taking place in Warsaw, Poland on 25-26th of May, 2015.">
   <link href="{% static 'img/favicon.png' %}" rel="shortcut icon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:title" content="PyWaw Summit - 25-26th of May, 2015 - Warsaw, Poland" />
@@ -19,59 +19,78 @@
   {% endcompress %}
 </head>
 <body>
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3 logo">
-        <img src="{% static 'img/logo.png' %}" alt="PyWaw Summit" />
-      </div>
-      <div class="col-md-9 description">
-        <h1>PyWaw Summit</h1>
-        <h3>25-26th of May, 2015 - Warsaw, Poland</h3>
-        <p>Join PyWaw in making Python community BIG! Join us for a conference in Warsaw: two days of amazing talks delivered by international speakers and two evenings of networking and fun. Inspire Yourself to reach the summit!</p>
 
-        <!-- Begin MailChimp Signup Form -->
-        <form class="subscription" method="post" action="//pywaw.us9.list-manage.com/subscribe/post?u=6b2b834e61a714b235d08d1c2&amp;id=c28f4ff36f" target="_blank" novalidate>
-          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;"><input type="text" name="b_6b2b834e61a714b235d08d1c2_c28f4ff36f" tabindex="-1" value=""></div>
-          <div class="row">
-            <div class="col-md-5">
-                <input type="email" value="" name="EMAIL" class="form-control" placeholder="Email address">
-            </div>
-            <div class="col-md-1">
-              <input type="submit" value="Subscribe" name="subscribe" class="btn btn-info">
-            </div>
-          </div>
-        </form>
-        <!--End mc_embed_signup-->
-        <div class="social-media">
-          <a class="twitter-follow-button"
-            href="https://twitter.com/PyWawSummit"
-            data-show-count="false"
-            data-lang="en">
-          Follow
-          </a>
-          <script type="text/javascript">
-          window.twttr = (function (d, s, id) {
-            var t, js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src= "https://platform.twitter.com/widgets.js";
-            fjs.parentNode.insertBefore(js, fjs);
-            return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
-          }(document, "script", "twitter-wjs"));
-          </script>
-          <div class="fb-like" data-href="https://www.facebook.com/PyWawSummit" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
-        </div>
-      </div>
-    </div>
+  <div id="header">
+    <h1>.pywawsummit</h1>
+    <h2>Join us at our first conference!</h2>
+    <h2>May 25-26 2015 Warsaw</h2>
   </div>
+
+  <div id="about">
+    <h2>About</h2>
+    <p>PyWaw Summit is a conference organized for everyone interested in Python-related technology, taking place in Warsaw, Poland on 25-26th of May, 2015.</p>
+    <p>Two days of great talks in English led by mix of local and international speakers. The aim is to provide valuable content in a friendly atmosphere that favours experience sharing and fun.</p>
+    <p>The conference derives from experienced local Python community called PyWaw, which actively organizes monthly meetups for over 3.5 years. There were already more than 45 meetings and over 100 presentations.</p>
+    <p>Willing our community to grow, PyWaw decided to go one step beyond and organize a conference that makes a dent in the Python universe.</p>
+  </div>
+
+  <div id="stats">
+    <h2>Stats</h2>
+    <ul>
+      <li><strong>250+</strong> attendees</li>
+      <li><strong>1</strong> track</li>
+      <li><strong>20</strong> talks</li>
+      <li><strong>2</strong> days</li>
+    </ul>
+  </div>
+
+  <div id="speakers">
+    <h2>Speakers</h2>
+    <ul>
+      <li><img src="{{ STATIC_URL }}/img/organizers/konrad_halas.jpg" />Konrad Hałas</li>
+      <li><img src="{{ STATIC_URL }}/img/organizers/przemek_lewandowski.jpg" />Przemek Lewandowski</li>
+      <li><img src="{{ STATIC_URL }}/img/organizers/piotr_betkier.jpg" />Piotr Betkier</li>
+    </ul>
+    <button>See all speakers</button>
+  </div>
+
+  <div id="venue">
+    <h2>Venue</h2>
+    <p>Polonia Theater</p>
+    <p>Marszałkowska 56<br/>00-545 Warszawa</p>
+    <p><a href="http://teatrpolonia.pl">http://teatrpolonia.pl</a></p>
+  </div>
+
+  <div id="organizers">
+    <h2>Organizers</h2>
+    <ul>
+      <li><img src="{{ STATIC_URL }}/img/organizers/konrad_halas.jpg" />Konrad Hałas</li>
+      <li><img src="{{ STATIC_URL }}/img/organizers/przemek_lewandowski.jpg" />Przemek Lewandowski</li>
+      <li><img src="{{ STATIC_URL }}/img/organizers/piotr_betkier.jpg" />Piotr Betkier</li>
+      <li><img src="{{ STATIC_URL }}/img/organizers/wojtek_erbetowski.jpg" />Wojtek Erbetowski</li>
+      <li><img src="{{ STATIC_URL }}/img/organizers/justyna_sadlo.jpg" />Justyna Sadło</li>
+      <li><img src="{{ STATIC_URL }}/img/organizers/szymon_tezewski.jpg" />Szymon Teżewski</li>
+      <li><img src="{{ STATIC_URL }}/img/organizers/tomek_ducin.jpg" />Tomasz Ducin</li>
+      <li><img src="{{ STATIC_URL }}/img/organizers/michal_chalupczak.jpg" />Michał Chałupczak</li>
+      <li><img src="{{ STATIC_URL }}/img/organizers/ania_wszeborowska.jpg" />Ania Wszeborowska</li>
+    </ul>
+  </div>
+
+  <div id="sponsors">
+    <h2>Sponsors</h2>
+    <ul>
+      <li><img src="{{ STATIC_URL }}/img/organizers/szymon_tezewski.jpg" />Szymon Teżewski</li>
+      <li><img src="{{ STATIC_URL }}/img/organizers/tomek_ducin.jpg" />Tomasz Ducin</li>
+    </ul>
+  </div>
+
+  <div id="media">
+    <h2>Media</h2>
+    <p>
+      <a href="https://twitter.com/PyWawSummit">Twitter</a>
+      <a href="https://www.facebook.com/PyWawSummit">Facebook</a>
+    </p>
+  </div>
+
 </body>
 </html>
