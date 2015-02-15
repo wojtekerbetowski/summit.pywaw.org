@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'compressor',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -93,4 +94,17 @@ TEMPLATE_DIRS = (
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
+)
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
+
+
+SASS_BIN = os.path.abspath(os.path.join(BASE_DIR, 'static/node_modules/.bin/node-sass'))
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', SASS_BIN + ' {infile} --stdout --include-path static/bower_components/'),
 )
