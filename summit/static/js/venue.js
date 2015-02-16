@@ -6,9 +6,9 @@ function showGoogleMaps() {
  
     var mapOptions = {
         zoom: 17,
-        disableDefaultUI: true,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        center: latLng
+        center: latLng,
+        scrollwheel: false
     };
  
     map = new google.maps.Map(document.getElementById('map'),
