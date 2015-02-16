@@ -157,6 +157,7 @@ a {
 .organisers__row4 {
   @include grid-column($columns: 10, $offset: 1);
   @include block-grid(4);
+  margin-top: -3rem;
 }
 
 .organisers__hover {
@@ -179,7 +180,7 @@ a {
 .organisers__info {
   position: absolute;
   width: 100%;
-  padding-top: 100px;
+  padding-top: 65%;
   text-align: center;
 }
 
