@@ -162,6 +162,7 @@ a {
   @include grid-column(3);
   z-index: 1;
   background-color: rgba(white, 0.8);
+  pointer-events: auto;
 }
 
 .venue__title {
