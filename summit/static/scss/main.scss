@@ -1,4 +1,5 @@
 @import "foundation/scss/foundation/components/grid";
+@import "foundation/scss/foundation/components/block-grid";
 
 $orange-color: #E89715;
 $grey-color: #7F807D;
@@ -135,6 +136,27 @@ a {
 
 .stats__name {
   font-size: 40px;
+}
+
+.organisers-container {
+  background-image: url(../../img/organisers-background.png);
+}
+
+.organisers__title {
+  @include section-title;
+}
+
+.organisers {
+  @include grid-row();
+}
+
+.organisers__row5 {
+  @include block-grid(5);
+}
+
+.organisers__row4 {
+  @include grid-column($columns: 10, $offset: 1);
+  @include block-grid(4);
 }
 
 .venue-container {
