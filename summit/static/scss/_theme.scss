@@ -132,7 +132,7 @@ a {
 }
 
 .about-container {
-  background-image: url(../../img/about-background.png);
+  background-image: url(../../img/backgrounds/about.png);
 }
 
 .about {
@@ -187,7 +187,7 @@ a {
 }
 
 .organisers-container {
-  background-image: url(../../img/organisers-background.png);
+  background-image: url(../../img/backgrounds/organisers.png);
   color: white;
 }
 
@@ -266,17 +266,13 @@ a {
 }
 
 .media-container {
-  background-image: url(../../img/media-background.png);
+  background-image: url(../../img/backgrounds/media.png);
   color: white;
 }
 
 .media {
   @include grid-row();
   padding-bottom: 20px;
-}
-
-.media__title {
-  @include section-title;
 }
 
 .media__list {
