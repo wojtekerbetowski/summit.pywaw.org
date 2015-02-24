@@ -8,7 +8,8 @@ function showGoogleMaps() {
         zoom: 17,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         center: latLng,
-        scrollwheel: false
+        scrollwheel: false,
+        styles: [{"stylers": [{ "hue": "#ffb300" }]}]
     };
  
     map = new google.maps.Map(document.getElementById('map'),

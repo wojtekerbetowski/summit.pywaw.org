@@ -14,21 +14,25 @@
   {% compress css %}
   <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/main.scss' %}" />
   {% endcompress %}
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <div class="header">
+
+    <div class="navigation-button">
+    </div>
+    <ul class="header-media">
+      <li class="header-media__item"><a class="header-media__link header-media--mail" href="mailto:info@pywaw.org" target="_blank" class="media__link" ></a></li>
+      <li class="header-media__item"><a class="header-media__link header-media--twitter" href="https://twitter.com/PyWawSummit" target="_blank" class="media__link"></a></li>
+      <li class="header-media__item"><a class="header-media__link header-media--facebook" href="https://www.facebook.com/PyWawSummit" target="_blank" class="media__link" ></a></li>
+    </ul>
     <ul class="navigation">
       <li class="navigation__item"><a href="{% url 'home' %}#about" class="navigation__link">About</a></li>
       <li class="navigation__item"><a href="{% url 'home' %}#stats" class="navigation__link">Stats</a></li>
       <li class="navigation__item"><a href="{% url 'home' %}#venue" class="navigation__link">Venue</a></li>
       <li class="navigation__item"><a href="{% url 'home' %}#organisers" class="navigation__link">Organisers</a></li>
       <li class="navigation__item"><a href="{% url 'home' %}#media" class="navigation__link">Media</a></li>
-    </ul>
-    <div class="navigation-button">
-    </div>
-    <ul class="header-media">
-      <li class="header-media__item"><a class="header-media__link header-media--twitter" href="https://twitter.com/PyWawSummit" target="_blank" class="media__link"></a></li>
-      <li class="header-media__item"><a class="header-media__link header-media--facebook" href="https://www.facebook.com/PyWawSummit" target="_blank" class="media__link" ></a></li>
     </ul>
   </div>
   <div class="intro-container">
@@ -52,26 +56,66 @@
       </div>
     </div>
   </div>
-
   <div class="stats" id="stats">
     <h2 class="stats__title">Stats</h2>
     <dl class="stats__list">
-      <li class="stats__item"><span class="stats__data">250+</span><span class="stats__name">attendees</span></li>
+      <li class="stats__item"><span class="stats__data">250</span><span class="stats__name">attendees</span></li>
       <li class="stats__item"><span class="stats__data">1</span><span class="stats__name">track</span></li>
       <li class="stats__item"><span class="stats__data">20</span><span class="stats__name">talks</span></li>
       <li class="stats__item"><span class="stats__data">2</span><span class="stats__name">days</span></li>
     </dl>
   </div>
 
-  <!--<div id="speakers">-->
-    <!--<h2>Speakers</h2>-->
-    <!--<ul>-->
-      <!--<li><img src="{{ STATIC_URL }}/img/organizers/konrad_halas.jpg" />Konrad Hałas</li>-->
-      <!--<li><img src="{{ STATIC_URL }}/img/organizers/przemek_lewandowski.jpg" />Przemek Lewandowski</li>-->
-      <!--<li><img src="{{ STATIC_URL }}/img/organizers/piotr_betkier.jpg" />Piotr Betkier</li>-->
-    <!--</ul>-->
-    <!--<button>See all speakers</button>-->
-  <!--</div>-->
+  <!--
+  <div class="speakers-container" id="speakers">
+    <div class="organisers">
+      <h2 class="organisers__title">Speakers</h2>
+      <ul class="organisers__row5">
+        <li>
+          <img src="{{ STATIC_URL }}img/organisers/konrad.png" />
+          <span class="organisers__info">Konrad Hałas</span>
+        </li>
+        <li>
+          <img src="{{ STATIC_URL }}img/organisers/przemek.png" />
+          <span class="organisers__info">Przemek Lewandowski</span>
+        </li>
+        <li>
+          <img src="{{ STATIC_URL }}img/organisers/piotr.png" />
+          <span class="organisers__info">Piotr Betkier</span>
+        </li>
+        <li>
+          <img src="{{ STATIC_URL }}img/organisers/wojtek.png" />
+          <span class="organisers__info">Wojtek Erbetowski</span>
+        </li>
+        <li>
+          <img src="{{ STATIC_URL }}img/organisers/justyna.png" />
+          <span class="organisers__info">Justyna Sadło</span>
+        </li>
+      </ul>
+      <ul class="organisers__row4 large-centered">
+        <li>
+          <img src="{{ STATIC_URL }}img/organisers/szymon.png" />
+          <span class="organisers__info">Szymon Teżewski</span>
+        </li>
+        <li>
+          <img src="{{ STATIC_URL }}img/organisers/tomek.png" />
+          <span class="organisers__info">Tomasz Ducin</span>
+        </li>
+        <li>
+          <img src="{{ STATIC_URL }}img/organisers/michal.png" />
+          <span class="organisers__info">Michał Chałupczak</span>
+        </li>
+        <li>
+          <img src="{{ STATIC_URL }}img/organisers/ania.png" />
+          <span class="organisers__info">Ania Wszeborowska</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+-->
+
 
   <div class="venue-container" id="venue">
     <div class="map" id="map"></div>
@@ -128,15 +172,6 @@
           <img src="{{ STATIC_URL }}img/organisers/ania.png" />
           <span class="organisers__info">Ania Wszeborowska</span>
         </li>
-      </ul>
-    </div>
-  </div>
-  <div class="media-container" id="media">
-    <div class="media">
-      <ul class="media__list">
-        <li class="media__item"><a href="https://twitter.com/PyWawSummit" target="_blank" class="media__link" ><img src="{% static 'img/icons/twitter.svg' %}" alt="Twitter"></a></li>
-        <li class="media__item"><a href="https://www.facebook.com/PyWawSummit" target="_blank" class="media__link" ><img src="{% static 'img/icons/facebook.svg' %}" alt="Facebook"></a></li>
-        <li class="media__item"><a href="mailto:info@pywaw.org" class="media__link" target="_blank"><img src="{% static 'img/icons/email.svg' %}" alt="E-mail"></a></li>
       </ul>
     </div>
   </div>
