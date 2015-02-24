@@ -152,6 +152,9 @@ a {
 
 .cfp {
   @include grid-column($columns: 4, $offset: 1);
+  @media #{$small-only} {
+    @include grid-column($columns: 12, $offset: 0);
+  }
 }
 
 .cfp__button {
@@ -167,6 +170,9 @@ a {
 
 .registration {
   @include grid-column($columns: 4, $offset: 2);
+  @media #{$small-only} {
+    @include grid-column($columns: 12, $offset: 0);
+  }
 }
 
 .registration__button {
