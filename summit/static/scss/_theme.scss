@@ -99,7 +99,7 @@ a {
   display: block;
   background-size: contain !important;
   margin: 0 6px;
-  width: 20px;
+  width: 25px;
   height: 20px;
   margin-top: 7px;
 
@@ -134,7 +134,7 @@ a {
 .intro {
   @include grid-column(11);
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
   text-align: center;
   
   @media #{$small-only} {
@@ -142,6 +142,41 @@ a {
     margin: 0 auto;
   }
   
+}
+
+.intro-buttons {
+  margin-top: 40px;
+  width: 100%;
+
+}
+
+.cfp {
+  @include grid-column($columns: 4, $offset: 1);
+}
+
+.cfp__button {
+  @include button();
+  
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: rem-calc(21);
+  line-height: rem-calc(10);
+  height: 41px;
+  margin: 0;
+}
+
+.registration {
+  @include grid-column($columns: 4, $offset: 2);
+}
+
+.registration__button {
+  @include button($disabled: true);
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: rem-calc(21);
+  line-height: rem-calc(10);
+  height: 41px;
+  margin: 0;
 }
 
 .event-name {
@@ -233,6 +268,10 @@ a {
 .organisers-container {
   background-image: url('../../img/backgrounds/organisers.jpg');
   color: white;
+
+  @media #{$small-only} {
+    background: none;
+  }
 }
 
 .speakers-container {
@@ -248,19 +287,50 @@ a {
   @include grid-row();
 }
 
-.organisers__row5 {
-  @include block-grid(5);
+.organisers__wrapper {
+  overflow: hidden;
+  width: 100%;
 }
 
-.organisers__row4 {
-  @include grid-column($columns: 10, $offset: 1);
-  @include block-grid(4);
+.organisers__item {
+  width: 170px;
+  float: left;
+  margin: 0 15px;
+
+  @media #{$small-only} {
+    @include grid-column( $columns: 6);
+    margin: 0;
+    margin-bottom: 8px;
+
+  }
+}
+
+.organisers__item--offset {
+  margin-left: 115px;
+
+  @media #{$small-only} {
+    margin-left: 0;
+  }
+}
+
+.organisers__item--second-row {
+  margin-top: -45px;
+
+  @media #{$small-only} {
+    margin-top: 0;
+  }
 }
 
 .organisers__info {
   width: 100%;
   text-align: center;
   display: inline-block;
+  margin-top: 8px;
+
+  @media #{$small-only} {
+    color: $gray-second-color;
+    font-size: rem-calc(18);
+  }
 }
 
 .venue-container {

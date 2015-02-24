@@ -40,6 +40,18 @@
       <img src="{% static 'img/logo.svg' %}">
       <h1 class="event-name"><span>.pywaw</span><span class="event-name__summit">summit</span></h1>
       <h2 class="intro__subtitle">Join us at our first conference!<br>May 25-26 2015 Warsaw</h2>
+
+      <div class="intro-buttons">
+        <div class="cfp">
+          <a href="https://docs.google.com/forms/d/1Ip3WkTEyCrgQ2F5cbwOnzhGfX6DopZjA2TaJt6Pik74/viewform" target="_blank" class="cfp__button">Call for papers</a>
+          <h3>Closing 1st April 2015</h3>
+        </div>
+        <div class="registration">
+          <a target="_blank" class="registration__button">Registration</a>
+          <h3>Coming soon</h3>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -129,50 +141,49 @@
       </div>
     </div>
   </div>
-
   <div class="organisers-container" id="organisers">
     <div class="organisers">
       <h2 class="organisers__title">Organisers</h2>
-      <ul class="organisers__row5">
-        <li>
-            <img src="{{ STATIC_URL }}img/organisers/konrad.png" />
-            <span class="organisers__info">Konrad Hałas</span>
-        </li>
-        <li>
+      <div class="organisers__wrapper">
+
+        <div class="organisers__item">
+          <img src="{{ STATIC_URL }}img/organisers/konrad.png" />
+          <span class="organisers__info">Konrad Hałas</span>
+        </div>
+        <div class="organisers__item">
           <img src="{{ STATIC_URL }}img/organisers/przemek.png" />
           <span class="organisers__info">Przemek Lewandowski</span>
-        </li>
-        <li>
+        </div>
+        <div class="organisers__item">
           <img src="{{ STATIC_URL }}img/organisers/piotr.png" />
           <span class="organisers__info">Piotr Betkier</span>
-        </li>
-        <li>
+        </div>
+        <div class="organisers__item">
           <img src="{{ STATIC_URL }}img/organisers/wojtek.png" />
           <span class="organisers__info">Wojtek Erbetowski</span>
-        </li>
-        <li>
+        </div>
+        <div class="organisers__item">
           <img src="{{ STATIC_URL }}img/organisers/justyna.png" />
           <span class="organisers__info">Justyna Sadło</span>
-        </li>
-      </ul>
-      <ul class="organisers__row4 large-centered">
-        <li>
+        </div>
+        <div class="organisers__item organisers__item--second-row organisers__item--offset">
           <img src="{{ STATIC_URL }}img/organisers/szymon.png" />
           <span class="organisers__info">Szymon Teżewski</span>
-        </li>
-        <li>
+        </div>
+        <div class="organisers__item organisers__item--second-row ">
           <img src="{{ STATIC_URL }}img/organisers/tomek.png" />
           <span class="organisers__info">Tomasz Ducin</span>
-        </li>
-        <li>
+        </div>
+        <div class="organisers__item organisers__item--second-row">
           <img src="{{ STATIC_URL }}img/organisers/michal.png" />
           <span class="organisers__info">Michał Chałupczak</span>
-        </li>
-        <li>
+        </div>
+        <div class="organisers__item organisers__item--second-row">
           <img src="{{ STATIC_URL }}img/organisers/ania.png" />
           <span class="organisers__info">Ania Wszeborowska</span>
-        </li>
-      </ul>
+        </div>
+      </div>
+
     </div>
   </div>
 
