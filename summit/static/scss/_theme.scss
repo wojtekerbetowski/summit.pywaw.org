@@ -219,31 +219,10 @@ a {
 .organisers__row4 {
   @include grid-column($columns: 10, $offset: 1);
   @include block-grid(4);
-  margin-top: -3rem;
-}
-
-.organisers__hover {
-  display: none;
-}
-
-.organisers__hover img {
-  position: absolute;
-}
-
-.organisers__item:hover .organisers__image{
-  display: none;
-}
-
-.organisers__item:hover .organisers__hover{
-  display: block;
-  position: relative;
 }
 
 .organisers__info {
-  position: absolute;
-  width: 100%;
-  padding-top: 65%;
-  text-align: center;
+
 }
 
 .venue-container {
