@@ -119,6 +119,9 @@ a {
   font-size: 70px;
   margin-top: 0;
   margin-bottom: 0;
+  @media #{$small-only} {
+    font-size: 42px;
+  }
 }
 
 .intro__subtitle {
@@ -132,7 +135,8 @@ a {
 }
 
 .about-container {
-  background-image: url(../../img/backgrounds/about.png);
+  background: url(../../img/backgrounds/about.png) no-repeat;
+  background-size: cover;
 }
 
 .about {
@@ -147,10 +151,16 @@ a {
 
 .about__first-part {
   @include grid-column(6);
+  @media #{$small-only} {
+    @include grid-column(12);
+  }
 }
 
 .about__second-part {
   @include grid-column(6);
+  @media #{$small-only} {
+    @include grid-column(12);
+  }
 }
 
 .about__intro {
@@ -170,6 +180,9 @@ a {
   @include grid-column(3);
   display: inline;
   text-align: center;
+  @media #{$small-only} {
+    @include grid-column(6);
+  }
 }
 
 .stats__title {
@@ -259,10 +272,24 @@ a {
   z-index: 1;
   background-color: rgba(white, 0.8);
   pointer-events: auto;
+  @media #{$small-only} {
+    @include grid-column(12);
+  }
 }
 
 .venue__title {
   @include title-font;
+}
+
+.venue__map-link {
+  @include button();
+  text-transform: uppercase;
+  background-color: $orange-color;
+  width: 100%;
+  display: none;
+  @media #{$small-only} {
+    display: block;
+  }
 }
 
 .media-container {
