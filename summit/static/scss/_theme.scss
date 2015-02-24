@@ -97,11 +97,17 @@ a {
 
 .header-media__link {
   display: block;
-  width: 35px;
-  height: 35px;
   background-size: contain !important;
-  margin: 0 10px;
+  margin: 0 6px;
+  width: 20px;
+  height: 20px;
+  margin-top: 7px;
 
+  @media #{$small-only} {
+    width: 38px;
+    height: 39px;
+    margin-top: 10px;
+  }
 }
 
 .header-media--twitter {
@@ -114,6 +120,7 @@ a {
 
 .header-media--mail {
   background: url(../../img/icons/email.svg) no-repeat center;
+
 }
 
 .navigation-button2{
@@ -125,10 +132,16 @@ a {
 }
 
 .intro {
-  @include grid-column(12);
+  @include grid-column(11);
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: center;
+  
+  @media #{$small-only} {
+    float: none;
+    margin: 0 auto;
+  }
+  
 }
 
 .event-name {
