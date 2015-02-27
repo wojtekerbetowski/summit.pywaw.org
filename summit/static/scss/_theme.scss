@@ -680,8 +680,8 @@ a {
 
 .footer__social-icons {
   width: 150px;
-
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .footer-media {
@@ -711,9 +711,4 @@ a {
   width: 35px;
   height: 25px;
 
-  @media #{$small-only} {
-    width: 38px;
-    height: 39px;
-    margin-top: 5px;
-  }
 }
