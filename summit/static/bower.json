@@ -2,6 +2,7 @@
   "name": "summit",
   "version": "1.0.0",
   "dependencies": {
-    "foundation": "~5.5.1"
+    "foundation": "~5.5.1",
+    "jquery.scrollTo": "1.4.14"
   }
 }

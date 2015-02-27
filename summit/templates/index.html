@@ -18,23 +18,36 @@
   <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <div class="header">
 
-    <div class="navigation-button">
-    </div>
-    <ul class="header-media">
-      <li class="header-media__item"><a class="header-media__link header-media--mail" href="mailto:info@pywaw.org" target="_blank" class="media__link" ></a></li>
-      <li class="header-media__item"><a class="header-media__link header-media--twitter" href="https://twitter.com/PyWawSummit" target="_blank" class="media__link"></a></li>
-      <li class="header-media__item"><a class="header-media__link header-media--facebook" href="https://www.facebook.com/PyWawSummit" target="_blank" class="media__link" ></a></li>
-    </ul>
-    <ul class="navigation">
-      <li class="navigation__item"><a href="{% url 'home' %}#about" class="navigation__link">About</a></li>
-      <li class="navigation__item"><a href="{% url 'home' %}#stats" class="navigation__link">Stats</a></li>
-      <li class="navigation__item"><a href="{% url 'home' %}#venue" class="navigation__link">Venue</a></li>
-      <li class="navigation__item"><a href="{% url 'home' %}#organisers" class="navigation__link">Organisers</a></li>
-      <li class="navigation__item"><a href="{% url 'home' %}#media" class="navigation__link">Media</a></li>
-    </ul>
+<div class="sidebar-nav">
+  <ul class="sidebar__menu">
+    <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="#" data-target="intro">Home</a></li>
+    <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="#" data-target="about">About</a></li>
+    <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="#" data-target="stats">Stats</a></li>
+    <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="#" data-target="venue">Venue</a></li>
+    <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="#" data-target="organisers">Organisers</a></li>
+    <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="#" data-target="media">Media</a></li>
+  </ul>
+</div>
+
+<div class="header">
+  <div id="js-menu-button" class="navigation-button">
   </div>
+  <ul class="header-media">
+    <li class="header-media__item"><a class="header-media__link header-media--mail" href="mailto:info@pywaw.org" target="_blank" class="media__link" ></a></li>
+    <li class="header-media__item"><a class="header-media__link header-media--twitter" href="https://twitter.com/PyWawSummit" target="_blank" class="media__link"></a></li>
+    <li class="header-media__item"><a class="header-media__link header-media--facebook" href="https://www.facebook.com/PyWawSummit" target="_blank" class="media__link" ></a></li>
+  </ul>
+  <ul class="navigation">
+    <li class="navigation__item"><a href="{% url 'home' %}" class="navigation__link" data-target="intro">Home</a></li>
+    <li class="navigation__item"><a href="{% url 'home' %}#about" class="navigation__link" data-target="about">About</a></li>
+    <li class="navigation__item"><a href="{% url 'home' %}#stats" class="navigation__link" data-target="stats">Stats</a></li>
+    <li class="navigation__item"><a href="{% url 'home' %}#venue" class="navigation__link" data-target="venue">Venue</a></li>
+    <li class="navigation__item"><a href="{% url 'home' %}#organisers" class="navigation__link" data-target="organisers">Organisers</a></li>
+    <li class="navigation__item"><a href="{% url 'home' %}#media" class="navigation__link" data-target="media">Media</a></li>
+  </ul>
+</div>
+<div class="container">
   <div class="intro-container">
     <div class="intro">
       <img src="{% static 'img/logo.svg' %}">
@@ -47,7 +60,7 @@
           <h3>Closing 1st April 2015</h3>
         </div>
         <div class="registration">
-          <a target="_blank" class="registration__button">Registration</a>
+          <a target="_blank" class="registration__button not-active">Registration</a>
           <h3>Coming soon</h3>
         </div>
       </div>
@@ -126,7 +139,7 @@
   </div>
 
 
--->
+  -->
 
 
   <div class="venue-container" id="venue">
@@ -147,47 +160,139 @@
       <div class="organisers__wrapper">
 
         <div class="organisers__item">
-          <img src="{{ STATIC_URL }}img/organisers/konrad.png" />
-          <span class="organisers__info">Konrad Hałas</span>
+          <div class="hexagon-wrapper">
+            <div class="hexagon hexagon2">
+              <div class="hexagon-in1">
+                <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/konrad.png');">
+                  <div class="kwadrat">
+                    <a href="http://twitter.com" target="_blank" rel="nofollow"><h3>Konrad</h3></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
         <div class="organisers__item">
-          <img src="{{ STATIC_URL }}img/organisers/przemek.png" />
-          <span class="organisers__info">Przemek Lewandowski</span>
+          <div class="hexagon-wrapper">
+            <div class="hexagon hexagon2">
+              <div class="hexagon-in1">
+                <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/przemek.png');">
+                  <div class="kwadrat">
+                    <a href="http://twitter.com" target="_blank" rel="nofollow"><h3>Przemek</h3></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
         <div class="organisers__item">
-          <img src="{{ STATIC_URL }}img/organisers/piotr.png" />
-          <span class="organisers__info">Piotr Betkier</span>
+          <div class="hexagon-wrapper">
+            <div class="hexagon hexagon2">
+              <div class="hexagon-in1">
+                <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/piotr.png');">
+                  <div class="kwadrat">
+                    <a href="http://twitter.com" target="_blank" rel="nofollow"><h3>Piotr</h3></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
         <div class="organisers__item">
-          <img src="{{ STATIC_URL }}img/organisers/wojtek.png" />
-          <span class="organisers__info">Wojtek Erbetowski</span>
+          <div class="hexagon-wrapper">
+            <div class="hexagon hexagon2">
+              <div class="hexagon-in1">
+                <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/wojtek.png');">
+                  <div class="kwadrat">
+                    <a href="http://twitter.com" target="_blank" rel="nofollow"><h3>Wojtek</h3></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
         <div class="organisers__item">
-          <img src="{{ STATIC_URL }}img/organisers/justyna.png" />
-          <span class="organisers__info">Justyna Sadło</span>
+          <div class="hexagon-wrapper">
+            <div class="hexagon hexagon2">
+              <div class="hexagon-in1">
+                <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/justyna.png');">
+                  <div class="kwadrat">
+                    <a href="http://twitter.com" target="_blank" rel="nofollow"><h3>Justyna</h3></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
         <div class="organisers__item organisers__item--second-row organisers__item--offset">
-          <img src="{{ STATIC_URL }}img/organisers/szymon.png" />
-          <span class="organisers__info">Szymon Teżewski</span>
+          <div class="hexagon-wrapper">
+            <div class="hexagon hexagon2">
+              <div class="hexagon-in1">
+                <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/szymon.png');">
+                  <div class="kwadrat">
+                    <a href="http://twitter.com" target="_blank" rel="nofollow"><h3>Szymon</h3></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="organisers__item organisers__item--second-row ">
-          <img src="{{ STATIC_URL }}img/organisers/tomek.png" />
-          <span class="organisers__info">Tomasz Ducin</span>
-        </div>
+
         <div class="organisers__item organisers__item--second-row">
-          <img src="{{ STATIC_URL }}img/organisers/michal.png" />
-          <span class="organisers__info">Michał Chałupczak</span>
+          <div class="hexagon-wrapper">
+            <div class="hexagon hexagon2">
+              <div class="hexagon-in1">
+                <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/tomek.png');">
+                  <div class="kwadrat">
+                    <a href="http://twitter.com" target="_blank" rel="nofollow"><h3>Tomasz</h3></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
         <div class="organisers__item organisers__item--second-row">
-          <img src="{{ STATIC_URL }}img/organisers/ania.png" />
-          <span class="organisers__info">Ania Wszeborowska</span>
+          <div class="hexagon-wrapper">
+            <div class="hexagon hexagon2">
+              <div class="hexagon-in1">
+                <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/michal.png');">
+                  <div class="kwadrat">
+                    <a href="http://twitter.com" target="_blank" rel="nofollow"><h3>Michał</h3></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="organisers__item organisers__item--second-row">
+          <div class="hexagon-wrapper">
+            <div class="hexagon hexagon2">
+              <div class="hexagon-in1">
+                <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/ania.png');">
+                  <div class="kwadrat">
+                    <a href="http://twitter.com" target="_blank" rel="nofollow"><h3>Ania</h3></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
   </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}/bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}/js/venue.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}/js/misc.js"></script>
 
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-  <script type="text/javascript" src="{{ STATIC_URL }}/js/venue.js"></script>
 </body>
 </html>
