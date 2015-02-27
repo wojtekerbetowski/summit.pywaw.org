@@ -17,7 +17,6 @@ a {
 
 * {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-user-modify: read-write-plaintext-only;
 }
 
 @mixin title-font() {
@@ -701,14 +700,11 @@ a {
   display: block;
   float: right;
   padding: 7px;
-
 }
 
 .footer-media__link {
   display: block;
   background-size: contain !important;
-
   width: 35px;
   height: 25px;
-
 }
