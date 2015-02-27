@@ -26,7 +26,6 @@
     <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="#" data-target="stats">Stats</a></li>
     <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="#" data-target="venue">Venue</a></li>
     <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="#" data-target="organisers">Organisers</a></li>
-    <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="#" data-target="media">Media</a></li>
   </ul>
 </div>
 
@@ -44,7 +43,6 @@
     <li class="navigation__item"><a href="{% url 'home' %}#stats" class="navigation__link" data-target="stats">Stats</a></li>
     <li class="navigation__item"><a href="{% url 'home' %}#venue" class="navigation__link" data-target="venue">Venue</a></li>
     <li class="navigation__item"><a href="{% url 'home' %}#organisers" class="navigation__link" data-target="organisers">Organisers</a></li>
-    <li class="navigation__item"><a href="{% url 'home' %}#media" class="navigation__link" data-target="media">Media</a></li>
   </ul>
 </div>
 <div class="container">
@@ -287,7 +285,32 @@
       </div>
     </div>
   </div>
+  <div class="sponsors-container">
+    <div class="sponsors" id="sponsors">
+      <h2 class="sponsors__title">Sponsors</h2>
+
+      <div class="sponsors__text">
+        Do you want to sponsor PyWaw Summit conference? Check our sponsorship offer or contact us via <a href="mailto:sponsors@pywaw.org">sponsors@pywaw.org</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-inner">
+      <div class="footer__text">Stay in touch with PyWaw Summit!</div>
+      <div class="footer__social-icons">
+        <ul class="footer-media">
+          <li class="footer-media__item"><a class="footer-media__link header-media--mail" href="mailto:info@pywaw.org" target="_blank" class="media__link" ></a></li>
+          <li class="footer-media__item"><a class="footer-media__link header-media--twitter" href="https://twitter.com/PyWawSummit" target="_blank" class="media__link"></a></li>
+          <li class="footer-media__item"><a class="footer-media__link header-media--facebook" href="https://www.facebook.com/PyWawSummit" target="_blank" class="media__link" ></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
+
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}/bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
