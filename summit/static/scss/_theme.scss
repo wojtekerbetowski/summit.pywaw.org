@@ -15,6 +15,11 @@ a {
   color: #2ea0c2;
 }
 
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-user-modify: read-write-plaintext-only;
+}
+
 @mixin title-font() {
   text-transform: uppercase;
   font-size: rem-calc(30);
