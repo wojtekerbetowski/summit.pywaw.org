@@ -22,7 +22,7 @@ a {
 @mixin title-font() {
   text-transform: uppercase;
   font-size: rem-calc(30);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 @mixin section-title() {
@@ -179,6 +179,10 @@ a {
   font-size: 18px !important;
   display: block;
   text-align: center;
+
+  &:hover {
+    color: #e5e5e5;
+  }
 }
 
 .sidebar__menu__item--active {
@@ -216,7 +220,7 @@ a {
   margin-top: 80px;
 
   h3 {
-    font-size: rem-calc(18);
+    font-size: rem-calc(21);
   }
 }
 
@@ -234,7 +238,8 @@ a {
   @include button();
 
   text-transform: uppercase;
-  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
   font-size: rem-calc(21);
   line-height: rem-calc(10);
   white-space: nowrap;
@@ -256,7 +261,8 @@ a {
 .registration__button {
   @include button($disabled: true);
   text-transform: uppercase;
-  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
   font-size: rem-calc(21);
   line-height: rem-calc(10);
   height: 41px;
@@ -272,7 +278,7 @@ a {
 }
 
 .event-name {
-  font-family: Questrial;
+  font-family: Questrial, sans-serif;
   font-size: 68px;
   margin-top: 0;
   margin-bottom: 0;
@@ -284,6 +290,12 @@ a {
 }
 
 .intro__subtitle {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 34px;
+}
+
+.intro__date {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 36px;
@@ -302,12 +314,12 @@ a {
   @include grid-row();
   padding-bottom: 50px;
   color: white;
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
 
   p {
-    margin-top: 0px;
-    line-height: rem-calc(21);
+    margin-top: 0;
+    line-height: rem-calc(22);
   }
 }
 
@@ -355,20 +367,21 @@ a {
 
 .stats__data {
   color: $blue-color;
-  font-size: 100px;
+  font-size: rem-calc(100);
+  font-weight: 300;
   display: block;
-  
+
   @media #{$small-only} {
     font-size: rem-calc(80);
   }
 }
 
 .stats__name {
-  font-size: rem-calc(40);
+  font-size: rem-calc(24);
   color: #7F807D;
   
   @media #{$small-only} {
-    font-size: rem-calc(30);
+    font-size: rem-calc(20);
   }
 }
 
@@ -531,10 +544,10 @@ a {
   text-align: center;
   display: inline-block;
   margin-top: 8px;
+  font-size: rem-calc(18);
 
   @media #{$small-only} {
     color: $gray-second-color;
-    font-size: rem-calc(18);
   }
 }
 
@@ -542,6 +555,10 @@ a {
   height: 400px;
   position: relative;
   padding-top: 70px;
+
+  @media #{$small-only} {
+    padding-top: 0;
+  }
 }
 
 .map {
@@ -572,6 +589,7 @@ a {
   z-index: 1;
   background-color: rgba(white, 0.8);
   pointer-events: auto;
+  font-size: rem-calc(18);
   
   @media #{$small-only} {
     @include grid-column($columns: 12);
@@ -580,6 +598,14 @@ a {
 
 .venue__title {
   @include title-font;
+
+  @media #{$small-only} {
+    color: $orange-color;
+  }
+}
+
+.venue__polonia {
+  font-size: rem-calc(21);
 }
 
 .venue__map-link {

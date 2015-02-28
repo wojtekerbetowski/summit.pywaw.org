@@ -14,8 +14,8 @@
   {% compress css %}
   <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/main.scss' %}" />
   {% endcompress %}
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+  <link href='{% static 'fonts/fonts.css' %}' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
@@ -34,8 +34,8 @@
   </div>
   <ul class="header-media">
     <li class="header-media__item"><a class="header-media__link header-media--mail" href="mailto:info@pywaw.org" target="_blank" class="media__link" ></a></li>
-    <li class="header-media__item"><a class="header-media__link header-media--twitter" href="https://twitter.com/PyWawSummit" target="_blank" class="media__link"></a></li>
     <li class="header-media__item"><a class="header-media__link header-media--facebook" href="https://www.facebook.com/PyWawSummit" target="_blank" class="media__link" ></a></li>
+    <li class="header-media__item"><a class="header-media__link header-media--twitter" href="https://twitter.com/PyWawSummit" target="_blank" class="media__link"></a></li>
   </ul>
   <ul class="navigation">
     <li class="navigation__item"><a href="{% url 'home' %}" class="navigation__link" data-target="intro">Home</a></li>
@@ -50,7 +50,7 @@
     <div class="intro">
       <img src="{% static 'img/logo.svg' %}">
       <h1 class="event-name"><span>.pywaw</span><span class="event-name__summit">summit</span></h1>
-      <h2 class="intro__subtitle">Join us at our first conference!<br>May 25-26 2015 Warsaw</h2>
+      <h2 class="intro__subtitle">Join us at our first conference!</h2><h2 class="intro__date">May 25-26 2015 Warsaw</h2>
 
       <div class="intro-buttons">
         <div class="cfp">
@@ -145,7 +145,7 @@
     <div class="venue">
       <div class="venue__box">
         <h2 class="venue__title">Venue</h2>
-        <p>Polonia Theater</p>
+        <p class="venue__polonia">Polonia Theater</p>
         <p>Marszałkowska 56<br/>00-545 Warsaw</p>
         <p><a href="http://teatrpolonia.pl">http://teatrpolonia.pl</a></p>
         <a href="https://www.google.pl/maps/place/Teatr+Polonia/@52.223706,21.015961,18z/data=!3m1!4b1!4m2!3m1!1s0x471eccefb2ea2943:0x2adff76fc2eb225d" target="_blank" class="venue__map-link">See the map</a>
@@ -302,8 +302,8 @@
       <div class="footer__social-icons">
         <ul class="footer-media">
           <li class="footer-media__item"><a class="footer-media__link header-media--mail" href="mailto:info@pywaw.org" target="_blank" class="media__link" ></a></li>
-          <li class="footer-media__item"><a class="footer-media__link header-media--twitter" href="https://twitter.com/PyWawSummit" target="_blank" class="media__link"></a></li>
           <li class="footer-media__item"><a class="footer-media__link header-media--facebook" href="https://www.facebook.com/PyWawSummit" target="_blank" class="media__link" ></a></li>
+          <li class="footer-media__item"><a class="footer-media__link header-media--twitter" href="https://twitter.com/PyWawSummit" target="_blank" class="media__link"></a></li>
         </ul>
       </div>
     </div>
