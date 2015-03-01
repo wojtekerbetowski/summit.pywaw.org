@@ -306,7 +306,7 @@ a {
 }
 
 .about-container {
-  background: url('../../img/backgrounds/about.png') no-repeat;
+  background: url('/static/img/backgrounds/about.png') no-repeat;
   background-size: cover;
 }
 
@@ -386,7 +386,7 @@ a {
 }
 
 .organisers-container {
-  background-image: url('../../img/backgrounds/organisers.jpg');
+  background-image: url('/static/img/backgrounds/organisers.jpg');
   color: white;
 
   @media #{$small-only} {
@@ -479,7 +479,7 @@ a {
 
 
 .speakers-container {
-  background-image: url('../../img/backgrounds/speakers.jpg');
+  background-image: url('/static/img/backgrounds/speakers.jpg');
   color: white;
 }
 
@@ -580,7 +580,7 @@ a {
   width: 100%;
   
   @media #{$small-only} {
-    background-image: url('../../img/backgrounds/map-mobile.png');
+    background-image: url('/static/img/backgrounds/map-mobile.png');
   }
 }
 
@@ -620,7 +620,7 @@ a {
 }
 
 .media-container {
-  background-image: url('../../img/backgrounds/media.png');
+  background-image: url('/static/img/backgrounds/media.png');
   color: white;
 }
 
@@ -687,7 +687,7 @@ a {
 .footer {
   width: 100%;
   height: 125px;
-  background: url('../../img/backgrounds/media.png');
+  background: url('/static/img/backgrounds/media.png');
   background-position: center;
 }
 
