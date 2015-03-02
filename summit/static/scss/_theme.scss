@@ -220,6 +220,10 @@ a {
   margin: 0 auto;
   margin-top: 80px;
 
+  @media #{$small-only} {
+    margin-top: 50px;
+  }
+
   h3 {
     font-size: rem-calc(21);
   }
@@ -256,6 +260,7 @@ a {
   @media #{$small-only} {
     float: none;
     @include grid-column($columns: 10, $offset: 1);
+    padding-top: 20px;
   }
 }
 
@@ -286,7 +291,7 @@ a {
   letter-spacing: 1px;
 
   @media #{$small-only} {
-    font-size: rem-calc(48);
+    font-size: rem-calc(42);
   }
 }
 
