@@ -305,6 +305,7 @@ a {
 .intro__date {
   margin-top: 5px;
   margin-bottom: 0;
+  font-weight: 500;
   font-size: rem-calc(36);
 
   @media #{$small-only} {
