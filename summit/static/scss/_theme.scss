@@ -218,11 +218,7 @@ a {
   width: 100%;
   max-width: 650px;
   margin: 0 auto;
-  margin-top: 80px;
-
-  @media #{$small-only} {
-    margin-top: 50px;
-  }
+  margin-top: 40px;
 
   h3 {
     font-size: rem-calc(21);
@@ -296,12 +292,13 @@ a {
 }
 
 .intro__subtitle {
-  margin-top: 0;
+  margin-top: 10px;
   margin-bottom: 0;
   font-size: rem-calc(34);
 
   @media #{$small-only} {
     font-size: rem-calc(24);
+    margin-top: 15px;
   }
 }
 
