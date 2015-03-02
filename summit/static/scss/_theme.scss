@@ -6,6 +6,10 @@ body {
   font-size: rem-calc(18);
 }
 
+h1, h2, h3 {
+  font-weight: 400;
+}
+
 a {
   text-decoration: none;
   color: #2ea0c2;
@@ -305,6 +309,10 @@ a {
 .about-container {
   background: url('/static/img/backgrounds/about.png') no-repeat;
   background-size: cover;
+
+  @media #{$small-only} {
+    background-image: url('/static/img/backgrounds/about-mobile.jpg');
+  }
 }
 
 .about {
