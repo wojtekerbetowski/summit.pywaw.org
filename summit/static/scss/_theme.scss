@@ -280,26 +280,34 @@ a {
 
 .event-name {
   font-family: Questrial, sans-serif;
-  font-size: 68px;
+  font-size: rem-calc(68);
   margin-top: 0;
   margin-bottom: 0;
   letter-spacing: 1px;
 
   @media #{$small-only} {
-    font-size: 42px;
+    font-size: rem-calc(48);
   }
 }
 
 .intro__subtitle {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 34px;
+  font-size: rem-calc(34);
+
+  @media #{$small-only} {
+    font-size: rem-calc(24);
+  }
 }
 
 .intro__date {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 36px;
+  font-size: rem-calc(36);
+
+  @media #{$small-only} {
+    font-size: rem-calc(25);
+  }
 }
 
 .event-name__summit {
