@@ -511,6 +511,12 @@ a {
 .organisers__wrapper {
   overflow: hidden;
   width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  @media #{$small-only} {
+    padding: 0;
+  }
 }
 
 .organisers__item {
