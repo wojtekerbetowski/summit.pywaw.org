@@ -31,9 +31,4 @@ jQuery(document).ready(function(){
         }
     });
 
-    /* Code of conduct */
-    $('.coc__button').bind('click', function(e){
-        e.preventDefault();
-        $('.coc__read_more_text').toggleClass('hide');
-    });
 });
