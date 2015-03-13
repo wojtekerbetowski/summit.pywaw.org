@@ -707,6 +707,30 @@ a {
   margin-bottom: 20px;
 }
 
+/*
+
+  Code of conduct
+
+*/
+
+.coc-container {
+  @include grid-row;
+}
+
+
+.coc {
+  margin-bottom: 50px;
+}
+
+.coc__text {
+  margin-left: 10px;
+}
+
+.coc__title {
+  @include section-title;
+
+  margin-bottom: 20px;
+}
 
 /*
 

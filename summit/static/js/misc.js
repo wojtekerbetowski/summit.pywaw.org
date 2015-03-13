@@ -30,4 +30,5 @@ jQuery(document).ready(function(){
             $('body').scrollTo('.' + $(this).data('target'), 1000, {offset: -40});
         }
     });
+
 });
