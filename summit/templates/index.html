@@ -1,355 +1,259 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 {% load staticfiles compress %}
-<html>
-<head lang="en">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
-  <title>PyWaw Summit - 25-26th of May, 2015 - Warsaw, Poland</title>
-  <meta name="description" content="PyWaw Summit is a conference organized for everyone interested in Python-related technology, taking place in Warsaw, Poland on 25-26th of May, 2015.">
-  <link href="{% static 'img/favicon.ico' %}" rel="shortcut icon">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="PyWaw Summit - 25-26th of May, 2015 - Warsaw, Poland">
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="PyWaw Summit is a conference organized for everyone interested in Python-related technology, taking place in Warsaw, Poland on 25-26th of May, 2015.">
-  <meta property="og:url" content="http://summit.pywaw.org/">
-  {% compress css %}
-  <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/main.scss' %}" />
-  {% endcompress %}
-  <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
-  <link href='{% static 'fonts/fonts.css' %}' rel='stylesheet' type='text/css'>
-</head>
-<body>
+{% block content %}
+<div class="intro-container">
+  <div class="intro">
+    <img src="{% static 'img/logo.svg' %}">
+    <h1 class="event-name"><span>.pywaw</span><span class="event-name__summit">summit</span></h1>
+    <h2 class="intro__subtitle">Join us at our first conference!</h2><h2 class="intro__date">May 25-26 2015 Warsaw</h2>
 
-<div class="sidebar-nav">
-  <ul class="sidebar__menu">
-    <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="#" data-target="intro">Home</a></li>
-    <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="#" data-target="about">About</a></li>
-    <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="#" data-target="stats">Stats</a></li>
-    <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="#" data-target="venue">Venue</a></li>
-    <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="#" data-target="organisers">Organisers</a></li>
-    <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="#" data-target="coc">Code of Conduct</a></li>
-  </ul>
+    <div class="intro-buttons">
+      <div class="cfp">
+        <a href="https://docs.google.com/forms/d/1Ip3WkTEyCrgQ2F5cbwOnzhGfX6DopZjA2TaJt6Pik74/viewform" target="_blank" class="cfp__button">Call for papers</a>
+        <h3>Closing 1st April 2015</h3>
+      </div>
+      <div class="registration">
+        <a target="_blank" class="registration__button not-active">Registration</a>
+        <h3>Coming soon</h3>
+      </div>
+    </div>
+
+  </div>
 </div>
 
-<div class="header">
-  <div id="js-menu-button" class="navigation-button">
+<div class="about-container" id="about">
+  <div class="about">
+    <h2 class="about__title">About</h2>
+    <div class="about__first-part">
+      <p class="about__intro">PyWaw Summit is a conference organized for everyone interested in Python-related technology, taking place in Warsaw, Poland on 25-26th of May, 2015.</p>
+      <p>Two days of great talks in English led by mix of local and international speakers. The aim is to provide valuable content in a friendly atmosphere that favours experience sharing and fun.</p>
+    </div>
+    <div class="about__second-part">
+      <p>The conference derives from experienced local Python community called PyWaw, which actively organizes monthly meetups for over 3.5 years. There were already more than 45 meetings and over 100 presentations.</p>
+      <p>Willing our community to grow, PyWaw decided to go one step beyond and organize a conference that makes a dent in the Python universe.</p>
+    </div>
   </div>
-  <ul class="header-media">
-    <li class="header-media__item"><a class="header-media__link header-media--mail" href="mailto:info@pywaw.org" target="_blank" class="media__link" ></a></li>
-    <li class="header-media__item"><a class="header-media__link header-media--facebook" href="https://www.facebook.com/PyWawSummit" target="_blank" class="media__link" ></a></li>
-    <li class="header-media__item"><a class="header-media__link header-media--twitter" href="https://twitter.com/PyWawSummit" target="_blank" class="media__link"></a></li>
-  </ul>
-  <ul class="navigation">
-    <li class="navigation__item"><a href="{% url 'home' %}" class="navigation__link" data-target="intro">Home</a></li>
-    <li class="navigation__item"><a href="{% url 'home' %}#about" class="navigation__link" data-target="about">About</a></li>
-    <li class="navigation__item"><a href="{% url 'home' %}#stats" class="navigation__link" data-target="stats">Stats</a></li>
-    <li class="navigation__item"><a href="{% url 'home' %}#venue" class="navigation__link" data-target="venue">Venue</a></li>
-    <li class="navigation__item"><a href="{% url 'home' %}#organisers" class="navigation__link" data-target="organisers">Organisers</a></li>
-    <li class="navigation__item"><a href="{% url 'home' %}#organisers" class="navigation__link" data-target="coc">Code of Conduct</a></li>
-  </ul>
 </div>
-<div class="container">
-  <div class="intro-container">
-    <div class="intro">
-      <img src="{% static 'img/logo.svg' %}">
-      <h1 class="event-name"><span>.pywaw</span><span class="event-name__summit">summit</span></h1>
-      <h2 class="intro__subtitle">Join us at our first conference!</h2><h2 class="intro__date">May 25-26 2015 Warsaw</h2>
+<div class="stats" id="stats">
+  <h2 class="stats__title">Stats</h2>
+  <dl class="stats__list">
+    <li class="stats__item"><span class="stats__data">250</span><span class="stats__name">attendees</span></li>
+    <li class="stats__item"><span class="stats__data">1</span><span class="stats__name">track</span></li>
+    <li class="stats__item"><span class="stats__data">20</span><span class="stats__name">talks</span></li>
+    <li class="stats__item"><span class="stats__data">2</span><span class="stats__name">days</span></li>
+  </dl>
+</div>
 
-      <div class="intro-buttons">
-        <div class="cfp">
-          <a href="https://docs.google.com/forms/d/1Ip3WkTEyCrgQ2F5cbwOnzhGfX6DopZjA2TaJt6Pik74/viewform" target="_blank" class="cfp__button">Call for papers</a>
-          <h3>Closing 1st April 2015</h3>
-        </div>
-        <div class="registration">
-          <a target="_blank" class="registration__button not-active">Registration</a>
-          <h3>Coming soon</h3>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="about-container" id="about">
-    <div class="about">
-      <h2 class="about__title">About</h2>
-      <div class="about__first-part">
-        <p class="about__intro">PyWaw Summit is a conference organized for everyone interested in Python-related technology, taking place in Warsaw, Poland on 25-26th of May, 2015.</p>
-        <p>Two days of great talks in English led by mix of local and international speakers. The aim is to provide valuable content in a friendly atmosphere that favours experience sharing and fun.</p>
-      </div>
-      <div class="about__second-part">
-        <p>The conference derives from experienced local Python community called PyWaw, which actively organizes monthly meetups for over 3.5 years. There were already more than 45 meetings and over 100 presentations.</p>
-        <p>Willing our community to grow, PyWaw decided to go one step beyond and organize a conference that makes a dent in the Python universe.</p>
-      </div>
-    </div>
-  </div>
-  <div class="stats" id="stats">
-    <h2 class="stats__title">Stats</h2>
-    <dl class="stats__list">
-      <li class="stats__item"><span class="stats__data">250</span><span class="stats__name">attendees</span></li>
-      <li class="stats__item"><span class="stats__data">1</span><span class="stats__name">track</span></li>
-      <li class="stats__item"><span class="stats__data">20</span><span class="stats__name">talks</span></li>
-      <li class="stats__item"><span class="stats__data">2</span><span class="stats__name">days</span></li>
-    </dl>
-  </div>
-
-  <!--
-  <div class="speakers-container" id="speakers">
-    <div class="organisers">
-      <h2 class="organisers__title">Speakers</h2>
-      <ul class="organisers__row5">
-        <li>
-          <img src="{{ STATIC_URL }}img/organisers/konrad.png" />
-          <span class="organisers__info">Konrad Hałas</span>
-        </li>
-        <li>
-          <img src="{{ STATIC_URL }}img/organisers/przemek.png" />
-          <span class="organisers__info">Przemek Lewandowski</span>
-        </li>
-        <li>
-          <img src="{{ STATIC_URL }}img/organisers/piotr.png" />
-          <span class="organisers__info">Piotr Betkier</span>
-        </li>
-        <li>
-          <img src="{{ STATIC_URL }}img/organisers/wojtek.png" />
-          <span class="organisers__info">Wojtek Erbetowski</span>
-        </li>
-        <li>
-          <img src="{{ STATIC_URL }}img/organisers/justyna.png" />
-          <span class="organisers__info">Justyna Sadło</span>
-        </li>
-      </ul>
-      <ul class="organisers__row4 large-centered">
-        <li>
-          <img src="{{ STATIC_URL }}img/organisers/szymon.png" />
-          <span class="organisers__info">Szymon Teżewski</span>
-        </li>
-        <li>
-          <img src="{{ STATIC_URL }}img/organisers/tomek.png" />
-          <span class="organisers__info">Tomasz Ducin</span>
-        </li>
-        <li>
-          <img src="{{ STATIC_URL }}img/organisers/michal.png" />
-          <span class="organisers__info">Michał Chałupczak</span>
-        </li>
-        <li>
-          <img src="{{ STATIC_URL }}img/organisers/ania.png" />
-          <span class="organisers__info">Ania Wszeborowska</span>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-
-  -->
-
-
-  <div class="venue-container" id="venue">
-    <div class="map" id="map"></div>
-    <div class="venue">
-      <div class="venue__box">
-        <h2 class="venue__title">Venue</h2>
-        <p class="venue__polonia">Polonia Theater</p>
-        <p>Marszałkowska 56<br/>00-545 Warsaw</p>
-        <p><a href="http://teatrpolonia.pl">http://teatrpolonia.pl</a></p>
-        <div class="venue__map-link-container">
-          <a href="https://www.google.pl/maps/place/Teatr+Polonia/@52.223706,21.015961,18z/data=!3m1!4b1!4m2!3m1!1s0x471eccefb2ea2943:0x2adff76fc2eb225d" target="_blank" class="venue__map-link">See the map</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="organisers-container" id="organisers">
-    <div class="organisers">
-      <h2 class="organisers__title">Organisers</h2>
-      <div class="organisers__wrapper">
-
-        <div class="organisers__item">
-          <div class="hexagon-wrapper">
-            <div class="hexagon hexagon2">
-              <div class="hexagon-in1">
-                <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/konrad.png');">
-                  <div class="kwadrat">
-                    <a href="https://twitter.com/konradhalas" target="_blank" rel="nofollow"><h3>Konrad</h3></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="organisers__item">
-          <div class="hexagon-wrapper">
-            <div class="hexagon hexagon2">
-              <div class="hexagon-in1">
-                <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/przemek.png');">
-                  <div class="kwadrat">
-                    <a href="https://twitter.com/haxoza" target="_blank" rel="nofollow"><h3>Przemek</h3></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="organisers__item">
-          <div class="hexagon-wrapper">
-            <div class="hexagon hexagon2">
-              <div class="hexagon-in1">
-                <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/piotr.png');">
-                  <div class="kwadrat">
-                    <a href="https://twitter.com/piotrbetkier" target="_blank" rel="nofollow"><h3>Piotr</h3></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="organisers__item">
-          <div class="hexagon-wrapper">
-            <div class="hexagon hexagon2">
-              <div class="hexagon-in1">
-                <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/wojtek.png');">
-                  <div class="kwadrat">
-                    <a href="https://twitter.com/erbetowski" target="_blank" rel="nofollow"><h3>Wojtek</h3></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="organisers__item">
-          <div class="hexagon-wrapper">
-            <div class="hexagon hexagon2">
-              <div class="hexagon-in1">
-                <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/justyna.png');">
-                  <div class="kwadrat">
-                    <h3>Justyna</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="organisers__item organisers__item--second-row organisers__item--offset">
-          <div class="hexagon-wrapper">
-            <div class="hexagon hexagon2">
-              <div class="hexagon-in1">
-                <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/szymon.png');">
-                  <div class="kwadrat">
-                    <a href="https://twitter.com/jasisz1" target="_blank" rel="nofollow"><h3>Szymon</h3></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="organisers__item organisers__item--second-row">
-          <div class="hexagon-wrapper">
-            <div class="hexagon hexagon2">
-              <div class="hexagon-in1">
-                <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/tomek.png');">
-                  <div class="kwadrat">
-                    <a href="https://twitter.com/tomasz_ducin" target="_blank" rel="nofollow"><h3>Tomek</h3></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="organisers__item organisers__item--second-row">
-          <div class="hexagon-wrapper">
-            <div class="hexagon hexagon2">
-              <div class="hexagon-in1">
-                <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/michal.png');">
-                  <div class="kwadrat">
-                    <a href="https://twitter.com/tochomik" target="_blank" rel="nofollow"><h3>Michał</h3></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="organisers__item organisers__item--second-row">
-          <div class="hexagon-wrapper">
-            <div class="hexagon hexagon2">
-              <div class="hexagon-in1">
-                <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/ania.png');">
-                  <div class="kwadrat">
-                    <a href="https://twitter.com/aniawsz" target="_blank" rel="nofollow"><h3>Ania</h3></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="sponsors-container">
-    <div class="sponsors" id="sponsors">
-      <h2 class="sponsors__title">Sponsors</h2>
-
-      <div class="sponsors__text">
-        Do you want to sponsor PyWaw Summit conference? <a href="{{ STATIC_URL }}files/pywaw-sponsorship.pdf" target="_blank">Check our sponsorship offer</a> or contact us via <a href="mailto:sponsors@pywaw.org">sponsors@pywaw.org</a>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="coc-container">
-    <div class="coc" id="coc">
-      <h2 class="coc__title">Code of conduct</h2>
-
-      <div class="coc__text">
-          <p>PyWaw Summit derives from local community and friendly atmosphere is one of its goals. That’s why we expect all attendees, speakers, sponsors and volunteers at our conference to abide with the Code of Conduct below. The organisers will enforce this code throughout the event. We are expecting cooperation from all participants to help us ensure a safe environment for everybody.</p>
-            <p><em>TL;DR: Be excellent to each other.</em></p>
-            <h3>Need Help? Contact us!</h3>
-            <p>Ania Wszeborowska: <a href="mailto:ania@pywaw.org">ania@pywaw.org</a>, +48784916773<p>
-            <p>Piotr Betkier: <a href="mailto:piotr@pywaw.org">piotr@pywaw.org</a>, +48606650076<p>
-            <h3>Code of Conduct</h3>
-            <p>Our conference is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, age, sexual orientation, disability, physical appearance, body size, race, or religion (or lack thereof). We do not tolerate harassment of conference participants in any form. Sexual language and imagery is not appropriate for any conference venue, including talks, parties, Twitter and other online media. Harassment includes offensive verbal comments related to gender, age, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.
-            <p>Participants asked to stop any harassing behavior are expected to comply immediately. Conference participants violating these rules may be sanctioned or expelled from the conference <em>without a refund</em> at the discretion of the conference organisers. If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff.</p>
-            <p>Alcohol overdose does not relieve anyone of the responsibility for their actions.</p>
-            <p><small><em>Original source and credit (edited): <a href="http://2012.jsconf.us/#/about">http://2012.jsconf.us/#/about</a> &amp; <a href="http://geekfeminism.wikia.com/wiki/Conference_anti-harassment/Policy">The Ada Initiative</a><br>
-            This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a></em></small>
-            </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer">
-    <div class="footer-inner">
-      <div class="footer__text">Stay in touch with PyWaw Summit!</div>
-      <div class="footer__social-icons">
-        <ul class="footer-media">
-          <li class="footer-media__item"><a class="footer-media__link header-media--mail" href="mailto:info@pywaw.org" target="_blank" class="media__link" ></a></li>
-          <li class="footer-media__item"><a class="footer-media__link header-media--facebook" href="https://www.facebook.com/PyWawSummit" target="_blank" class="media__link" ></a></li>
-          <li class="footer-media__item"><a class="footer-media__link header-media--twitter" href="https://twitter.com/PyWawSummit" target="_blank" class="media__link"></a></li>
-        </ul>
-      </div>
-    </div>
+<!--
+<div class="speakers-container" id="speakers">
+  <div class="organisers">
+    <h2 class="organisers__title">Speakers</h2>
+    <ul class="organisers__row5">
+      <li>
+        <img src="{{ STATIC_URL }}img/organisers/konrad.png" />
+        <span class="organisers__info">Konrad Hałas</span>
+      </li>
+      <li>
+        <img src="{{ STATIC_URL }}img/organisers/przemek.png" />
+        <span class="organisers__info">Przemek Lewandowski</span>
+      </li>
+      <li>
+        <img src="{{ STATIC_URL }}img/organisers/piotr.png" />
+        <span class="organisers__info">Piotr Betkier</span>
+      </li>
+      <li>
+        <img src="{{ STATIC_URL }}img/organisers/wojtek.png" />
+        <span class="organisers__info">Wojtek Erbetowski</span>
+      </li>
+      <li>
+        <img src="{{ STATIC_URL }}img/organisers/justyna.png" />
+        <span class="organisers__info">Justyna Sadło</span>
+      </li>
+    </ul>
+    <ul class="organisers__row4 large-centered">
+      <li>
+        <img src="{{ STATIC_URL }}img/organisers/szymon.png" />
+        <span class="organisers__info">Szymon Teżewski</span>
+      </li>
+      <li>
+        <img src="{{ STATIC_URL }}img/organisers/tomek.png" />
+        <span class="organisers__info">Tomasz Ducin</span>
+      </li>
+      <li>
+        <img src="{{ STATIC_URL }}img/organisers/michal.png" />
+        <span class="organisers__info">Michał Chałupczak</span>
+      </li>
+      <li>
+        <img src="{{ STATIC_URL }}img/organisers/ania.png" />
+        <span class="organisers__info">Ania Wszeborowska</span>
+      </li>
+    </ul>
   </div>
 </div>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<script type="text/javascript" src="{{ STATIC_URL }}bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
-<script type="text/javascript" src="{{ STATIC_URL }}js/venue.js"></script>
-<script type="text/javascript" src="{{ STATIC_URL }}js/misc.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-60250784-1', 'auto');
-  ga('send', 'pageview');
-</script>
+-->
 
-</body>
-</html>
+
+<div class="venue-container" id="venue">
+  <div class="map" id="map"></div>
+  <div class="venue">
+    <div class="venue__box">
+      <h2 class="venue__title">Venue</h2>
+      <p class="venue__polonia">Polonia Theater</p>
+      <p>Marszałkowska 56<br/>00-545 Warsaw</p>
+      <p><a href="http://teatrpolonia.pl">http://teatrpolonia.pl</a></p>
+      <div class="venue__map-link-container">
+        <a href="https://www.google.pl/maps/place/Teatr+Polonia/@52.223706,21.015961,18z/data=!3m1!4b1!4m2!3m1!1s0x471eccefb2ea2943:0x2adff76fc2eb225d" target="_blank" class="venue__map-link">See the map</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="organisers-container" id="organisers">
+  <div class="organisers">
+    <h2 class="organisers__title">Organisers</h2>
+    <div class="organisers__wrapper">
+
+      <div class="organisers__item">
+        <div class="hexagon-wrapper">
+          <div class="hexagon hexagon2">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/konrad.png');">
+                <div class="kwadrat">
+                  <a href="https://twitter.com/konradhalas" target="_blank" rel="nofollow"><h3>Konrad</h3></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="organisers__item">
+        <div class="hexagon-wrapper">
+          <div class="hexagon hexagon2">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/przemek.png');">
+                <div class="kwadrat">
+                  <a href="https://twitter.com/haxoza" target="_blank" rel="nofollow"><h3>Przemek</h3></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="organisers__item">
+        <div class="hexagon-wrapper">
+          <div class="hexagon hexagon2">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/piotr.png');">
+                <div class="kwadrat">
+                  <a href="https://twitter.com/piotrbetkier" target="_blank" rel="nofollow"><h3>Piotr</h3></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="organisers__item">
+        <div class="hexagon-wrapper">
+          <div class="hexagon hexagon2">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/wojtek.png');">
+                <div class="kwadrat">
+                  <a href="https://twitter.com/erbetowski" target="_blank" rel="nofollow"><h3>Wojtek</h3></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="organisers__item">
+        <div class="hexagon-wrapper">
+          <div class="hexagon hexagon2">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/justyna.png');">
+                <div class="kwadrat">
+                  <h3>Justyna</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="organisers__item organisers__item--second-row organisers__item--offset">
+        <div class="hexagon-wrapper">
+          <div class="hexagon hexagon2">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/szymon.png');">
+                <div class="kwadrat">
+                  <a href="https://twitter.com/jasisz1" target="_blank" rel="nofollow"><h3>Szymon</h3></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="organisers__item organisers__item--second-row">
+        <div class="hexagon-wrapper">
+          <div class="hexagon hexagon2">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/tomek.png');">
+                <div class="kwadrat">
+                  <a href="https://twitter.com/tomasz_ducin" target="_blank" rel="nofollow"><h3>Tomek</h3></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="organisers__item organisers__item--second-row">
+        <div class="hexagon-wrapper">
+          <div class="hexagon hexagon2">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/michal.png');">
+                <div class="kwadrat">
+                  <a href="https://twitter.com/tochomik" target="_blank" rel="nofollow"><h3>Michał</h3></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="organisers__item organisers__item--second-row">
+        <div class="hexagon-wrapper">
+          <div class="hexagon hexagon2">
+            <div class="hexagon-in1">
+              <div class="hexagon-in2" style="background-image: url('{{ STATIC_URL }}img/organisers/ania.png');">
+                <div class="kwadrat">
+                  <a href="https://twitter.com/aniawsz" target="_blank" rel="nofollow"><h3>Ania</h3></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sponsors-container">
+  <div class="sponsors" id="sponsors">
+    <h2 class="sponsors__title">Sponsors</h2>
+
+    <div class="sponsors__text">
+      Do you want to sponsor PyWaw Summit conference? <a href="{{ STATIC_URL }}files/pywaw-sponsorship.pdf" target="_blank">Check our sponsorship offer</a> or contact us via <a href="mailto:sponsors@pywaw.org">sponsors@pywaw.org</a>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/navbar-scroll.js"></script>
+{% endblock %}

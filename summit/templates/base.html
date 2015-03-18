@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load staticfiles compress %}
+<html>
+<head lang="en">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+  <title>PyWaw Summit - 25-26th of May, 2015 - Warsaw, Poland</title>
+  <meta name="description" content="PyWaw Summit is a conference organized for everyone interested in Python-related technology, taking place in Warsaw, Poland on 25-26th of May, 2015.">
+  <link href="{% static 'img/favicon.ico' %}" rel="shortcut icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="PyWaw Summit - 25-26th of May, 2015 - Warsaw, Poland">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="PyWaw Summit is a conference organized for everyone interested in Python-related technology, taking place in Warsaw, Poland on 25-26th of May, 2015.">
+  <meta property="og:url" content="http://summit.pywaw.org/">
+  {% compress css %}
+  <link rel="stylesheet" type="text/x-scss" href="{% static 'scss/main.scss' %}" />
+  {% endcompress %}
+  <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+  <link href='{% static 'fonts/fonts.css' %}' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<div class="sidebar-nav">
+  <ul class="sidebar__menu">
+    <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="{% url 'home' %}" data-target="intro">Home</a></li>
+    <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="{% url 'home' %}#about" data-target="about">About</a></li>
+    <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="{% url 'home' %}#stats" data-target="stats">Stats</a></li>
+    <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="{% url 'home' %}#venue" data-target="venue">Venue</a></li>
+    <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="{% url 'home' %}#organisers" data-target="organisers">Organisers</a></li>
+    <li class="sidebar__menu__item"><a class="sidebar__menu__link" href="{% url 'code-of-conduct' %}">Code of Conduct</a></li>
+  </ul>
+</div>
+
+<div class="header">
+  <div id="js-menu-button" class="navigation-button">
+  </div>
+  <ul class="header-media">
+    <li class="header-media__item"><a class="header-media__link header-media--mail" href="mailto:info@pywaw.org" target="_blank" class="media__link" ></a></li>
+    <li class="header-media__item"><a class="header-media__link header-media--facebook" href="https://www.facebook.com/PyWawSummit" target="_blank" class="media__link" ></a></li>
+    <li class="header-media__item"><a class="header-media__link header-media--twitter" href="https://twitter.com/PyWawSummit" target="_blank" class="media__link"></a></li>
+  </ul>
+  <ul class="navigation">
+    <li class="navigation__item"><a href="{% url 'home' %}" class="navigation__link" data-target="intro">Home</a></li>
+    <li class="navigation__item"><a href="{% url 'home' %}#about" class="navigation__link" data-target="about">About</a></li>
+    <li class="navigation__item"><a href="{% url 'home' %}#stats" class="navigation__link" data-target="stats">Stats</a></li>
+    <li class="navigation__item"><a href="{% url 'home' %}#venue" class="navigation__link" data-target="venue">Venue</a></li>
+    <li class="navigation__item"><a href="{% url 'home' %}#organisers" class="navigation__link" data-target="organisers">Organisers</a></li>
+    <li class="navigation__item"><a href="{% url 'code-of-conduct' %}" class="navigation__link">Code of Conduct</a></li>
+  </ul>
+</div>
+
+<div class="container">
+{% block content %}{% endblock %}
+</div>
+
+<div class="footer">
+    <div class="footer-inner">
+      <div class="footer__text">Stay in touch with PyWaw Summit!</div>
+      <div class="footer__social-icons">
+        <ul class="footer-media">
+          <li class="footer-media__item"><a class="footer-media__link header-media--mail" href="mailto:info@pywaw.org" target="_blank" class="media__link" ></a></li>
+          <li class="footer-media__item"><a class="footer-media__link header-media--facebook" href="https://www.facebook.com/PyWawSummit" target="_blank" class="media__link" ></a></li>
+          <li class="footer-media__item"><a class="footer-media__link header-media--twitter" href="https://twitter.com/PyWawSummit" target="_blank" class="media__link"></a></li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/venue.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/misc.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-60250784-1', 'auto');
+  ga('send', 'pageview');
+</script>
+{% block js %}{% endblock %}
+
+</body>
+</html>

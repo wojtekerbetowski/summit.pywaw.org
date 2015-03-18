@@ -20,15 +20,4 @@ jQuery(document).ready(function(){
         opened = false;
     });
 
-
-
-    $('.navigation__link, .sidebar__menu__link').bind('click', function(e) {
-        e.preventDefault();
-        if( $(this).data('target') !== undefined) {
-            $('.sidebar-nav').removeClass('sidebar-nav--opened');
-            opened = false;
-            $('body').scrollTo('.' + $(this).data('target'), 1000, {offset: -40});
-        }
-    });
-
 });
