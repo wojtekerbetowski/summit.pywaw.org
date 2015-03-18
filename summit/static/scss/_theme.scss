@@ -34,13 +34,13 @@ a {
 
 .header {
   width: 100%;
-  height: 35px;
+  height: 60px;
   background-color: $orange-color;
   position: fixed;
   z-index: 1000;
   
-  @media #{$small-only} {
-    height: 60px;
+  @media #{$large-up} {
+    height: 35px;
   }
 }
 
@@ -50,9 +50,10 @@ a {
   padding: 0;
   margin: 0;
   line-height: rem-calc(15);
+  display: none;
 
-  @media #{$small-only} {
-    display: none;
+  @media #{$large-up}  {
+    display: block;
   }
 }
 
@@ -76,15 +77,15 @@ a {
 .navigation-button {
   background: url(/static/img/icons/menu.svg) no-repeat center;
   background-size: 50px 50px;
-  display: none;
+  display: block;
   width: 60px;
   height: 100%;
   margin-left: 10px;
   cursor: pointer;
+  float: left;
 
-  @media #{$small-only} {
-    display: block;
-    float: left;
+  @media #{$large-up} {
+    display: none;
   }
 }
 
@@ -94,10 +95,6 @@ a {
   margin: 0;
   display: block;
   float: right;
-
-  @media #{$small-only} {
-    display: block;
-  }
 }
 
 .header-media__item {
@@ -113,14 +110,14 @@ a {
 .header-media__link {
   display: block;
   background-size: contain !important;
+  margin-top: 5px;
+  width: 38px;
+  height: 39px;
 
-  width: 25px;
-  height: 21px;
-
-  @media #{$small-only} {
-    width: 38px;
-    height: 39px;
-    margin-top: 5px;
+  @media #{$large-up} {
+    width: 25px;
+    height: 21px;
+    margin: 0;
   }
 }
 
