@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="registration-container">
+  <div class="registration">
+    <h2 class="registration__title">Registration</h2>
+    <form method="POST">{% csrf_token %}
+      <div class="row">
+        <div class="large-12 columns">
+          <label>Input Label
+            <input type="text" placeholder="large-12.columns" />
+          </label>
+        </div>
+      </div>
+      <label>Input Label
+        <input type="text" placeholder="large-12.columns" />
+      </label>
+      <table>
+      {{ form.as_table }}
+      </table>
+      <input type="submit" value="Register">
+    </form>
+    <h3>HOW TO PARTICIPATE</h3>
+    <p>Anyone willing to attend PyWaw Summit conference, has to fill the form available at http://summit.pywaw.org/registration and to pay the conference admission fee for his/her participation (if one is applicable). The number of tickets is limited, the registration and ticket purchase shall be closed, once the tickets are sold out / once the number of available tickets is exhausted. An e-mail confirming the participation with payment details shall be sent after filling the registration form. After placing the payment attende shall receive another e-mail, which is a confirmation of a successful registration. The conference participants hereby express their consent to the use of their image (for example in conference pictures) in conference materials (mainly at the internet site).</p>
+    <h3>RESIGNATION</h3>
+    <p>In case of resignation from participating in the conference and failure to replace the participant with someone else, the conference admission fee shall not be reimbursed. The same shall be applied when the participant fails to show up at the conference / The participant’s no show at the conference shall not entitle to claim for any reimbursement of the paid admission fee. These terms of participation may be amended by the Organisers from time to time.</p>
+    </p>
+  </div>
+</div>
+{% endblock %}

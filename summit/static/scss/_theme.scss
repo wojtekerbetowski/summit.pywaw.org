@@ -246,7 +246,7 @@ a {
   width: 100%;
 }
 
-.registration {
+.registration-button {
   width: 256px;
   float: right;
 
@@ -257,7 +257,7 @@ a {
   }
 }
 
-.registration__button {
+.registration-button__link {
   @include button($disabled: true);
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
@@ -830,4 +830,17 @@ a {
   background-size: contain !important;
   width: 35px;
   height: 25px;
+}
+
+.registration-container {
+  @include grid-row();
+}
+
+.registration {
+  @include grid-column(12);
+  margin-top: 60px;
+}
+
+.registration__title {
+  @include section-title();
 }
