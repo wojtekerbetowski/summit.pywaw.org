@@ -5,16 +5,6 @@
   <div class="registration">
     <h2 class="registration__title">Registration</h2>
     <form method="POST">{% csrf_token %}
-      <div class="row">
-        <div class="large-12 columns">
-          <label>Input Label
-            <input type="text" placeholder="large-12.columns" />
-          </label>
-        </div>
-      </div>
-      <label>Input Label
-        <input type="text" placeholder="large-12.columns" />
-      </label>
       <table>
       {{ form.as_table }}
       </table>
