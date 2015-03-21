@@ -9,7 +9,7 @@ class Attendee(models.Model):
     phone = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
     display_on_website = models.BooleanField(default=True)
-    notes = models.TextField()
+    notes = models.TextField(blank=True)
     invoice = models.BooleanField(default=False)
     company_name = models.CharField(max_length=100)
     company_address = models.CharField(max_length=500)
