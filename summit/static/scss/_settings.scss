@@ -1269,7 +1269,7 @@ $include-html-form-classes: true;
 // 30. Tables
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-table-classes: $include-html-classes;
+$include-html-table-classes: true;
 
 // These control the background color for the table and even rows
 // $table-bg: $white;

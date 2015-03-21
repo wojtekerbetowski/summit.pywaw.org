@@ -4,7 +4,36 @@
 <div class="payment-container">
   <div class="payment">
     <h2 class="payment__title">Registration completed</h2>
-    <p class="payment__section">Thank you for registration at PyWaw Summit conference!</p>
+    <p class="payment__section">Thank you for registration at PyWaw Summit conference! Please make a transfer to one of following bank account:</p>
+    <div class="payment__section">
+      <table>
+        <thead>
+          <tr>
+            <th>Currency</th>
+            <th>Price</th>
+            <th>Bank account</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>PLN</td>
+            <td>300</td>
+            <td>07 1090 2851 0000 0001 3023 6162</td>
+          </tr>
+          <tr>
+            <td>EUR</td>
+            <td>75</td>
+            <td>77 1090 2851 0000 0001 2240 0891</td>
+          </tr>
+          <tr>
+            <td>USD</td>
+            <td>75</td>
+            <td>27 1090 2851 0000 0001 2240 0918</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="payment__section">Your payment status: {% if attendee.is_paid %}paid{% else %}not paid{% endif %}</p>
   </div>
 </div>
 {% endblock %}
