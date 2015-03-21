@@ -1,7 +1,6 @@
-from django.core.urlresolvers import reverse
 from djet.assertions import EmailAssertionsMixin, StatusCodeAssertionsMixin
 from djet.testcases import ViewTestCase
-from . import views
+from . import views, models
 
 
 class AttendeeCreateViewTest(ViewTestCase, EmailAssertionsMixin, StatusCodeAssertionsMixin):
@@ -26,6 +25,7 @@ class AttendeeCreateViewTest(ViewTestCase, EmailAssertionsMixin, StatusCodeAsser
 
         response = self.view(request)
 
-        self.assert_redirect(response, reverse('home'))
+        attendee = models.Attendee.objects.get(email=data['email'])
+        self.assert_redirect(response, attendee.get_absolute_url())
         self.assert_emails_in_mailbox(1)
         self.assert_email_exists(to=[data['email']])

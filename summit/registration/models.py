@@ -1,4 +1,13 @@
+from django.core.urlresolvers import reverse
 from django.db import models
+import uuid
+
+
+def create_attendee_hash():
+    while True:
+        attendee_hash = uuid.uuid1().hex
+        if not Attendee.objects.filter(hash=attendee_hash).exists():
+            return attendee_hash
 
 
 class Attendee(models.Model):
@@ -16,6 +25,10 @@ class Attendee(models.Model):
     company_nip = models.CharField(max_length=10)
     is_paid = models.BooleanField(default=False)
     registration_date = models.DateTimeField(auto_now_add=True)
+    hash = models.CharField(max_length=32, default=create_attendee_hash)
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('attendee_detail', kwargs={'hash': self.hash})

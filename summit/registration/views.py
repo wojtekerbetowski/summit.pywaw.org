@@ -1,17 +1,17 @@
 from django.conf import settings
 from django.contrib.sites.shortcuts import get_current_site
 from django.core.mail import send_mail
-from django.core.urlresolvers import reverse_lazy
 from django.template.loader import render_to_string
-from django.views.generic import CreateView
+from django.views.generic import CreateView, DetailView
 from . import models, forms
 
 
 class AttendeeCreateView(CreateView):
     model = models.Attendee
     form_class = forms.AttendeeForm
-    template_name = 'registration.html'
-    success_url = reverse_lazy('home')
+
+    def get_success_url(self):
+        return self.object.get_absolute_url()
 
     def form_valid(self, form):
         response = super().form_valid(form)
@@ -30,3 +30,7 @@ class AttendeeCreateView(CreateView):
             recipient_list=[self.object.email],
         )
 
+
+class AttendeeDetailView(DetailView):
+    model = models.Attendee
+    slug_url_kwarg = slug_field = 'hash'
