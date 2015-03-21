@@ -844,3 +844,75 @@ a {
 .registration__title {
   @include section-title();
 }
+
+.registration__form {
+  @include grid-column(5, $last-column: true);
+  @media #{$medium-only} {
+    @include grid-column(12);
+  }
+}
+
+.registration__submit {
+  @include button();
+  text-transform: uppercase;
+  background-color: $orange-color;
+  font-size: 21px;
+}
+
+.terms {
+  @include grid-column(12);
+}
+
+.terms__title {
+  @include section-title();
+}
+
+.terms__subtitle {
+  @include grid-column(12);
+  margin-bottom: 0;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.terms__section {
+  @include grid-column(12);
+}
+
+.errorlist {
+  position: relative;
+  background: #dd4250;
+  list-style: none;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px;
+  top: -16px;
+}
+
+.errorlist:after, .errorlist:before {
+  bottom: 100%;
+  left: 35px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.errorlist:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-bottom-color: #dd4250;
+    border-width: 8px;
+    margin-left: -20px;
+}
+
+.errorlist:before {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #fff;
+  border-width: 8px;
+  margin-left: -21px;
+}
+
+.form__fieldhint {
+  margin-top: 5px;
+}

@@ -8,6 +8,12 @@ COMPANY_DETAILS_REQUIRED_ERROR = 'This field is required if you want to receive 
 class AttendeeForm(forms.ModelForm):
     accept_terms_of_service = forms.BooleanField(required=True)
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for field_name in self.fields:
+            field = self.fields.get(field_name)
+            field.widget.attrs['placeholder'] = field.label
+
     class Meta:
         model = models.Attendee
         fields = (
