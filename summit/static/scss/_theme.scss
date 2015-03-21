@@ -258,7 +258,7 @@ a {
 }
 
 .registration-button__link {
-  @include button($disabled: true);
+  @include button();
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
   font-weight: 600;
