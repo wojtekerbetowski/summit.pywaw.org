@@ -916,3 +916,20 @@ a {
 .form__fieldhint {
   margin-top: 5px;
 }
+
+.payment-container {
+  @include grid-row();
+}
+
+.payment {
+  @include grid-column(12);
+  margin-top: 60px;
+}
+
+.payment__title {
+  @include section-title();
+}
+
+.payment__section {
+  @include grid-column(12);
+}
