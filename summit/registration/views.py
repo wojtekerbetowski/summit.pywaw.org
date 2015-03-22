@@ -26,7 +26,7 @@ class AttendeeCreateView(CreateView):
         send_mail(
             subject=render_to_string('emails/registration_subject.txt', context).strip(),
             message=render_to_string('emails/registration_body.txt', context),
-            from_email=settings.DEFAULT_FROM_EMAIL,
+            from_email=settings.REGISTRATION_EMAIL,
             recipient_list=[self.object.email],
         )
 

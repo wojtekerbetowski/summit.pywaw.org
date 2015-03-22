@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'compressor',
+    'djrill',
     'registration',
 )
 
@@ -98,3 +99,5 @@ SASS_BIN = os.path.abspath(os.path.join(BASE_DIR, 'static/node_modules/.bin/node
 COMPRESS_PRECOMPILERS = (
     ('text/x-scss', SASS_BIN + ' {infile} --stdout --include-path static/bower_components/'),
 )
+
+REGISTRATION_EMAIL = 'PyWaw Summit Registration <registration@pywa.org>'
