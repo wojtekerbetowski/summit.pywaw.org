@@ -948,19 +948,32 @@ a {
   margin-top: 5px;
 }
 
-.payment-container {
-  @include grid-row();
-}
-
 .payment {
-  @include grid-column(12);
-  margin-top: 60px;
+  @include grid-row();
+  padding-top: 60px;
 }
 
 .payment__title {
   @include section-title();
+  margin-bottom: 0px;
 }
 
 .payment__section {
   @include grid-column(12);
+}
+
+.payment__table-container {
+  @include grid-column(6, $offset: 3);
+}
+
+.payment__table {
+  width: 100%;
+}
+
+.payment__paid {
+  color: #008000;
+}
+
+.payment__notpaid {
+  color: red;
 }
