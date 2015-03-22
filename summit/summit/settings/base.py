@@ -100,4 +100,4 @@ COMPRESS_PRECOMPILERS = (
     ('text/x-scss', SASS_BIN + ' {infile} --stdout --include-path static/bower_components/'),
 )
 
-REGISTRATION_EMAIL = 'PyWaw Summit Registration <registration@pywa.org>'
+REGISTRATION_EMAIL = 'Registration <registration@pywaw.org>'
