@@ -32,6 +32,19 @@ a {
   color: $orange-color;
 }
 
+@mixin custom-button() {
+  @include button();
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: rem-calc(21);
+  line-height: rem-calc(10);
+  white-space: nowrap;
+  height: 41px;
+  margin: 0;
+  width: 100%;
+}
+
 .header {
   width: 100%;
   height: 60px;
@@ -832,31 +845,42 @@ a {
   height: 25px;
 }
 
-.registration-container {
-  @include grid-row();
-}
-
 .registration {
-  @include grid-column(12);
-  margin-top: 60px;
+  @include grid-row();
 }
 
 .registration__title {
   @include section-title();
+  padding-top: 60px;
 }
 
 .registration__form {
-  @include grid-column(5, $last-column: true);
+  @include grid-column($columns: 5, $last-column:true);
+  @media #{$small-only} {
+    @include grid-column(12);
+  }
   @media #{$medium-only} {
     @include grid-column(12);
   }
 }
 
+.registration__controls {
+  margin-bottom: 10px;
+  input, textarea {
+    margin-bottom: 0;
+  }
+  label {
+    color: $gray-second-color;
+  }
+}
+
+.registration__example {
+  font-size: 13px;
+}
+
 .registration__submit {
-  @include button();
-  text-transform: uppercase;
+  @include custom-button();
   background-color: $orange-color;
-  font-size: 21px;
 }
 
 .terms {
@@ -875,7 +899,13 @@ a {
 }
 
 .terms__section {
-  @include grid-column(12);
+  @include grid-column(9);
+  @media #{$small-only} {
+    @include grid-column(12);
+  }
+  @media #{$medium-only} {
+    @include grid-column(12);
+  }
 }
 
 .errorlist {
@@ -885,7 +915,8 @@ a {
   color: #fff;
   font-size: 12px;
   padding: 5px;
-  top: -16px;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .errorlist:after, .errorlist:before {

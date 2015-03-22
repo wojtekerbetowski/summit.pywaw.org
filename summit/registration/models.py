@@ -22,7 +22,7 @@ class Attendee(models.Model):
     invoice = models.BooleanField(default=True)
     company_name = models.CharField(max_length=100, blank=True)
     company_address = models.CharField(max_length=500, blank=True)
-    company_nip = models.CharField(max_length=10, blank=True)
+    company_nip = models.CharField(max_length=10, blank=True, verbose_name='Company VATIN (NIP)')
     is_paid = models.BooleanField(default=False)
     registration_date = models.DateTimeField(auto_now_add=True)
     hash = models.CharField(max_length=32, default=create_attendee_hash)

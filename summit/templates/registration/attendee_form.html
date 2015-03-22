@@ -1,47 +1,73 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="registration-container">
-  <div class="registration">
-    <h2 class="registration__title">Registration</h2>
-    <form class="registration__form" method="POST">{% csrf_token %}
+<div class="registration">
+  <h2 class="registration__title">Registration</h2>
+  <form class="registration__form" method="POST">{% csrf_token %}
+    <div class="registration__controls">
       {{ form.name }}
       {{ form.name.errors }}
+    </div>
+    <div class="registration__controls">
       {{ form.tagline }}
       {{ form.tagline.errors }}
+      <small class="registration__example">e.g. Senior Python Developer at ACME</small>
+    </div>
+    <div class="registration__controls">
       {{ form.email }}
       {{ form.email.errors }}
+    </div>
+    <div class="registration__controls">
       {{ form.twitter }}
       {{ form.twitter.errors }}
+    </div>
+    <div class="registration__controls">
       {{ form.phone }}
       {{ form.phone.errors }}
+      <small class="registration__example">e.g. +48 111 222 333</small>
+    </div>
+    <div class="registration__controls">
       {{ form.location }}
       {{ form.location.errors }}
+      <small class="registration__example">e.g. Warsaw, Poland</small>
+    </div>
+    <div class="registration__controls">
       {{ form.display_on_website }}
       <label for="{{ form.display_on_website.id_for_label }}">Do you want to be on our website as an attendee?</label>
+    </div>
+    <div class="registration__controls">
       {{ form.notes }}
       {{ form.notes.errors }}
+      <small class="registration__example">e.g. you need a special assistance, you need vegetarian or vegan food options, or you have a special promo code</small>
+    </div>
+    <div class="registration__controls">
       {{ form.invoice}}
       <label for="{{ form.invoice.id_for_label }}">Invoice</label>
+    </div>
+    <div class="registration__controls">
       {{ form.company_name }}
       {{ form.company_name.errors }}
+    </div>
+    <div class="registration__controls">
       {{ form.company_address }}
       {{ form.company_address.errors }}
+    </div>
+    <div class="registration__controls">
       {{ form.company_nip }}
       {{ form.company_nip.errors }}
-      <div class="form__control">
-        {{ form.accept_terms_of_service }}
-        <label>Accept terms of service (below)</label>
-        {{ form.accept_terms_of_service.errors }}
-      </div>
-      <input class="registration__submit" type="submit" value="Register">
-    </form>
-    <h2 class="terms__title">Terms of service</h2>
-    <h3 class="terms__subtitle">How to participate</h3>
-    <p class="terms__section">Anyone willing to attend PyWaw Summit conference, has to fill the form available at http://summit.pywaw.org/registration and to pay the conference admission fee for his/her participation (if one is applicable). The number of tickets is limited, the registration and ticket purchase shall be closed, once the tickets are sold out / once the number of available tickets is exhausted. An e-mail confirming the participation with payment details shall be sent after filling the registration form. After placing the payment attende shall receive another e-mail, which is a confirmation of a successful registration. The conference participants hereby express their consent to the use of their image (for example in conference pictures) in conference materials (mainly at the internet site).</p>
-    <h3 class="terms__subtitle">Resignation</h3>
-    <p class="terms__section">In case of resignation from participating in the conference and failure to replace the participant with someone else, the conference admission fee shall not be reimbursed. The same shall be applied when the participant fails to show up at the conference / The participant’s no show at the conference shall not entitle to claim for any reimbursement of the paid admission fee. These terms of participation may be amended by the Organisers from time to time.</p>
-    </p>
-  </div>
+    </div>
+    <div class="registration__controls">
+      {{ form.accept_terms_of_service }}
+      <label for="{{ form.accept_terms_of_service.id_for_label }}">Accept terms of service (below)</label>
+      {{ form.accept_terms_of_service.errors }}
+    </div>
+    <input class="registration__submit" type="submit" value="Register">
+  </form>
+  <h2 class="terms__title">Terms of service</h2>
+  <h3 class="terms__subtitle">How to participate</h3>
+  <p class="terms__section">Anyone willing to attend PyWaw Summit conference, has to fill the form available at http://summit.pywaw.org/registration and to pay the conference admission fee for his/her participation (if one is applicable). The number of tickets is limited, the registration and ticket purchase shall be closed, once the tickets are sold out / once the number of available tickets is exhausted. An e-mail confirming the participation with payment details shall be sent after filling the registration form. After placing the payment attende shall receive another e-mail, which is a confirmation of a successful registration. The conference participants hereby express their consent to the use of their image (for example in conference pictures) in conference materials (mainly at the internet site).</p>
+  <h3 class="terms__subtitle">Resignation</h3>
+  <p class="terms__section">In case of resignation from participating in the conference and failure to replace the participant with someone else, the conference admission fee shall not be reimbursed. The same shall be applied when the participant fails to show up at the conference / The participant’s no show at the conference shall not entitle to claim for any reimbursement of the paid admission fee. These terms of participation may be amended by the Organisers from time to time.</p>
+  </p>
 </div>
 {% endblock %}
