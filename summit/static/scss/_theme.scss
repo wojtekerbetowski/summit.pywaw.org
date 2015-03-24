@@ -32,6 +32,19 @@ a {
   color: $orange-color;
 }
 
+@mixin custom-button() {
+  @include button();
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: rem-calc(21);
+  line-height: rem-calc(10);
+  white-space: nowrap;
+  height: 41px;
+  margin: 0;
+  width: 100%;
+}
+
 .header {
   width: 100%;
   height: 60px;
@@ -246,7 +259,7 @@ a {
   width: 100%;
 }
 
-.registration {
+.registration-button {
   width: 256px;
   float: right;
 
@@ -257,8 +270,8 @@ a {
   }
 }
 
-.registration__button {
-  @include button($disabled: true);
+.registration-button__link {
+  @include button();
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
   font-weight: 600;
@@ -830,4 +843,142 @@ a {
   background-size: contain !important;
   width: 35px;
   height: 25px;
+}
+
+.registration {
+  @include grid-row();
+}
+
+.registration__title {
+  @include section-title();
+  padding-top: 60px;
+}
+
+.registration__description {
+  @include grid-column(9);
+  margin-top: 0;
+}
+
+.registration__form {
+  @include grid-column($columns: 5, $last-column:true);
+  @media #{$small-only} {
+    @include grid-column(12);
+  }
+  @media #{$medium-only} {
+    @include grid-column(12);
+  }
+}
+
+.registration__controls {
+  margin-bottom: 10px;
+  input, textarea {
+    margin-bottom: 0;
+  }
+  label {
+    color: $gray-second-color;
+  }
+}
+
+.registration__example {
+  font-size: 13px;
+}
+
+.registration__submit {
+  @include custom-button();
+  background-color: $orange-color;
+}
+
+.terms {
+  @include grid-column(12);
+}
+
+.terms__title {
+  @include section-title();
+}
+
+.terms__subtitle {
+  @include grid-column(12);
+  margin-bottom: 0;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
+.terms__section {
+  @include grid-column(9);
+  @media #{$small-only} {
+    @include grid-column(12);
+  }
+  @media #{$medium-only} {
+    @include grid-column(12);
+  }
+}
+
+.errorlist {
+  position: relative;
+  background: #dd4250;
+  list-style: none;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.errorlist:after, .errorlist:before {
+  bottom: 100%;
+  left: 35px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.errorlist:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-bottom-color: #dd4250;
+    border-width: 8px;
+    margin-left: -20px;
+}
+
+.errorlist:before {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #fff;
+  border-width: 8px;
+  margin-left: -21px;
+}
+
+.form__fieldhint {
+  margin-top: 5px;
+}
+
+.payment {
+  @include grid-row();
+  padding-top: 60px;
+}
+
+.payment__title {
+  @include section-title();
+  margin-bottom: 0px;
+}
+
+.payment__section {
+  @include grid-column(12);
+}
+
+.payment__table-container {
+  @include grid-column(6, $offset: 3);
+}
+
+.payment__table {
+  width: 100%;
+}
+
+.payment__paid {
+  color: #008000;
+}
+
+.payment__notpaid {
+  color: red;
 }

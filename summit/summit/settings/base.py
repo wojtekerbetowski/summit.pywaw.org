@@ -40,6 +40,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'compressor',
+    'djrill',
+    'registration',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -55,17 +57,6 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'summit.urls'
 
 WSGI_APPLICATION = 'summit.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/1.7/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
@@ -108,3 +99,5 @@ SASS_BIN = os.path.abspath(os.path.join(BASE_DIR, 'static/node_modules/.bin/node
 COMPRESS_PRECOMPILERS = (
     ('text/x-scss', SASS_BIN + ' {infile} --stdout --include-path static/bower_components/'),
 )
+
+REGISTRATION_EMAIL = 'Registration <registration@pywaw.org>'
