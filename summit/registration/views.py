@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.contrib.sites.shortcuts import get_current_site
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
 from django.views.generic import CreateView, DetailView
 from . import models, forms
@@ -23,12 +23,13 @@ class AttendeeCreateView(CreateView):
             'attendee': self.object,
             'site': get_current_site(self.request),
         }
-        send_mail(
+        EmailMessage(
             subject=render_to_string('emails/registration_subject.txt', context).strip(),
-            message=render_to_string('emails/registration_body.txt', context),
+            body=render_to_string('emails/registration_body.txt', context),
             from_email=settings.REGISTRATION_EMAIL,
-            recipient_list=[self.object.email],
-        )
+            to=[self.object.email],
+            bcc=[settings.REGISTRATION_EMAIL],
+        ).send()
 
 
 class AttendeeDetailView(DetailView):
