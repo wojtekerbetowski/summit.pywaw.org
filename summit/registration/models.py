@@ -19,6 +19,7 @@ class Attendee(models.Model):
     location = models.CharField(max_length=100)
     display_on_website = models.BooleanField(default=True)
     notes = models.TextField(blank=True)
+    admin_notes = models.TextField(blank=True)
     invoice = models.BooleanField(default=True)
     company_name = models.CharField(max_length=100, blank=True)
     company_address = models.CharField(max_length=500, blank=True)

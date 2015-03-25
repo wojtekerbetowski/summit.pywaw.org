@@ -7,6 +7,7 @@ class AttendeeModelAdmin(admin.ModelAdmin):
         'name',
         'email',
         'location',
+        'admin_notes',
         'invoice',
         'is_paid',
         'registration_date',
