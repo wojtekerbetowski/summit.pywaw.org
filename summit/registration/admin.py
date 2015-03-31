@@ -10,6 +10,7 @@ class AttendeeModelAdmin(admin.ModelAdmin):
         'admin_notes',
         'invoice',
         'is_paid',
+        'invoice_sent',
         'registration_date',
     )
     readonly_fields = ('registration_date',)
